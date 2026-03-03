@@ -6,43 +6,54 @@
 <title>Pandora Control</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
-  body { background: #0a0a0f; color: #fff; font-family: 'Inter', system-ui, sans-serif; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0a0a0f; color: #fff; font-family: 'Inter', system-ui, sans-serif; font-size: 14px; }
   ::-webkit-scrollbar { width: 4px; } ::-webkit-scrollbar-track { background: #111; } ::-webkit-scrollbar-thumb { background: #333; border-radius: 2px; }
-  .card { background: #111118; border: 1px solid #1e1e2e; border-radius: 12px; padding: 14px; }
-  .rcard { background: #111118; border: 1px solid #1e1e2e; border-radius: 10px; padding: 12px; margin-bottom: 12px; }
-  .nav-item { padding: 8px 12px; border-radius: 8px; font-size: 12px; cursor: pointer; display: flex; align-items: center; gap: 8px; color: #666; transition: all .15s; }
+  .card { background: #111118; border: 1px solid #1e1e2e; border-radius: 14px; padding: 18px; margin-bottom: 16px; }
+  .card-title { font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #666; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .nav-item { padding: 10px 14px; border-radius: 10px; font-size: 14px; cursor: pointer; display: flex; align-items: center; gap: 10px; color: #666; transition: all .15s; margin-bottom: 2px; }
   .nav-item:hover { background: #1a1a2e; color: #aaa; }
-  .nav-item.active { background: #7c3aed20; color: #c4b5fd; }
-  .badge { padding: 3px 10px; border-radius: 20px; font-size: 10px; font-weight: 600; }
-  .pill { padding: 3px 10px; border-radius: 20px; font-size: 9px; display: inline-flex; align-items: center; gap: 3px; }
-  .spin { animation: spin 1s linear infinite; }
-  @keyframes spin { to { transform: rotate(360deg); } }
-  .pulse { animation: pulse 2s ease-in-out infinite; }
-  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .5; } }
-  .agenda-item { display: flex; gap: 10px; align-items: flex-start; padding: 8px 10px; background: #0d0d15; border-radius: 8px; border-left: 3px solid #333; margin-bottom: 6px; }
+  .nav-item.active { background: #7c3aed25; color: #c4b5fd; font-weight: 600; }
+  .nav-section { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: #333; padding: 14px 14px 6px; }
+  .badge { padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+  .pill { padding: 4px 12px; border-radius: 20px; font-size: 12px; display: inline-flex; align-items: center; gap: 4px; margin: 3px; }
+  .agenda-item { display: flex; gap: 14px; align-items: flex-start; padding: 12px 14px; background: #0d0d15; border-radius: 10px; border-left: 3px solid #333; margin-bottom: 8px; }
   .agenda-item.now { border-left-color: #10b981; background: #10b98108; }
   .agenda-item.soon { border-left-color: #f59e0b; }
-  .email-item { padding: 7px 0; border-bottom: 1px solid #1a1a2e; }
-  .email-item:last-child { border-bottom: none; }
-  .todo-item { display: flex; align-items: center; gap: 8px; padding: 6px 8px; border-radius: 6px; font-size: 11px; cursor: pointer; }
+  .email-row { padding: 10px 0; border-bottom: 1px solid #1a1a2e; }
+  .email-row:last-child { border-bottom: none; }
+  .todo-item { display: flex; align-items: center; gap: 10px; padding: 10px 10px; border-radius: 8px; font-size: 14px; cursor: pointer; margin-bottom: 4px; }
   .todo-item:hover { background: #1a1a2e; }
-  .checkbox { width: 14px; height: 14px; border-radius: 4px; border: 1.5px solid #333; flex-shrink: 0; cursor: pointer; transition: all .15s; }
+  .checkbox { width: 18px; height: 18px; border-radius: 5px; border: 2px solid #333; flex-shrink: 0; cursor: pointer; transition: all .15s; display: flex; align-items: center; justify-content: center; }
   .checkbox.done { background: #10b981; border-color: #10b981; }
+  .lead-item { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #1a1a2e; }
+  .lead-item:last-child { border-bottom: none; }
+  .lead-avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg,#7c3aed60,#4f46e560); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex-shrink: 0; }
+  .metric-card { background: #0d0d15; border: 1px solid #1a1a2e; border-radius: 12px; padding: 16px; text-align: center; }
+  .metric-val { font-size: 32px; font-weight: 700; }
+  .metric-label { font-size: 11px; color: #666; text-transform: uppercase; margin-top: 4px; }
+  .metric-sub { font-size: 12px; margin-top: 6px; }
+  .section-header { font-size: 20px; font-weight: 700; margin-bottom: 6px; }
+  .section-desc { font-size: 14px; color: #666; margin-bottom: 20px; line-height: 1.6; }
+  .alert-card { padding: 14px 16px; border-radius: 10px; margin-bottom: 10px; border-left: 4px solid; }
+  .alert-red { background: #ef444410; border-color: #ef4444; }
+  .alert-yellow { background: #f59e0b10; border-color: #f59e0b; }
+  .alert-green { background: #10b98110; border-color: #10b981; }
 </style>
 </head>
 <body class="h-screen flex flex-col overflow-hidden">
 
 <!-- TOP BAR -->
-<div style="background:#0d0d18;border-bottom:1px solid #1a1a2e;padding:10px 20px;" class="flex items-center justify-between flex-shrink-0">
-  <div class="flex items-center gap-3">
-    <span style="font-size:18px;font-weight:700">🔮 <span style="color:#7c3aed">Pandora</span> Control</span>
-    <span id="clock" style="font-size:11px;color:#555"></span>
+<div style="background:#0d0d18;border-bottom:1px solid #1a1a2e;padding:12px 24px;flex-shrink:0" class="flex items-center justify-between">
+  <div class="flex items-center gap-4">
+    <span style="font-size:20px;font-weight:700">🔮 <span style="color:#7c3aed">Pandora</span> Control</span>
+    <span id="clock" style="font-size:13px;color:#555"></span>
   </div>
-  <div class="flex items-center gap-2">
-    <span id="badge-urgent" class="badge" style="background:#ef444420;color:#ef4444;border:1px solid #ef444440">🔴 carregando...</span>
-    <span id="badge-next" class="badge" style="background:#f59e0b20;color:#f59e0b;border:1px solid #f59e0b40">📅 agenda</span>
-    <span id="badge-sys" class="badge" style="background:#10b98120;color:#10b981;border:1px solid #10b98140">✅ sistemas</span>
-    <div style="width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,#7c3aed,#4f46e5);display:flex;align-items:center;justify-content:center">👤</div>
+  <div class="flex items-center gap-3">
+    <span class="badge" style="background:#ef444420;color:#ef4444;border:1px solid #ef444440">🔴 2 urgentes</span>
+    <span class="badge" style="background:#f59e0b20;color:#f59e0b;border:1px solid #f59e0b40">📅 StartSe hoje</span>
+    <span class="badge" style="background:#10b98120;color:#10b981;border:1px solid #10b98140">✅ Sistemas OK</span>
+    <div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#7c3aed,#4f46e5);display:flex;align-items:center;justify-content:center;font-size:16px">👤</div>
   </div>
 </div>
 
@@ -50,82 +61,110 @@
 <div class="flex flex-1 overflow-hidden">
 
   <!-- SIDEBAR -->
-  <div style="width:200px;background:#0d0d18;border-right:1px solid #1a1a2e;padding:12px;display:flex;flex-direction:column;gap:2px;flex-shrink:0;overflow-y:auto">
-    <div style="font-size:9px;text-transform:uppercase;letter-spacing:1px;color:#333;padding:10px 12px 4px">Principal</div>
-    <div class="nav-item active" onclick="showSection('dashboard')">🏠 Dashboard</div>
-    <div class="nav-item" onclick="showSection('agenda')">📅 Agenda</div>
-    <div class="nav-item" onclick="showSection('emails')">📧 E-mails</div>
-    <div class="nav-item" onclick="showSection('leads')">🎯 Leads</div>
-    <div style="font-size:9px;text-transform:uppercase;letter-spacing:1px;color:#333;padding:10px 12px 4px">Grow Up</div>
-    <div class="nav-item" onclick="showSection('alunos')">👥 Alunos</div>
-    <div class="nav-item" onclick="showSection('pipeline')">📊 Pipeline</div>
-    <div style="font-size:9px;text-transform:uppercase;letter-spacing:1px;color:#333;padding:10px 12px 4px">DGA</div>
-    <div class="nav-item" onclick="showSection('riscos')">⚠️ Riscos</div>
-    <div style="font-size:9px;text-transform:uppercase;letter-spacing:1px;color:#333;padding:10px 12px 4px">Conteúdo</div>
-    <div class="nav-item" onclick="showSection('cortes')">✂️ Cortes</div>
-    <div class="nav-item" onclick="showSection('social')">📸 Social Media</div>
+  <div style="width:220px;background:#0d0d18;border-right:1px solid #1a1a2e;padding:14px;display:flex;flex-direction:column;flex-shrink:0;overflow-y:auto">
+    <div class="nav-section">Principal</div>
+    <div class="nav-item active" onclick="showSection('dashboard', this)">🏠 Dashboard</div>
+    <div class="nav-item" onclick="showSection('agenda', this)">📅 Agenda</div>
+    <div class="nav-item" onclick="showSection('emails', this)">📧 E-mails</div>
+    <div class="nav-item" onclick="showSection('leads', this)">🎯 Leads</div>
+    <div class="nav-section">Grow Up</div>
+    <div class="nav-item" onclick="showSection('alunos', this)">👥 Alunos</div>
+    <div class="nav-item" onclick="showSection('pipeline', this)">📊 Pipeline</div>
+    <div class="nav-section">DGA</div>
+    <div class="nav-item" onclick="showSection('riscos', this)">⚠️ Riscos</div>
+    <div class="nav-item" onclick="showSection('operacional', this)">🏢 Operacional</div>
+    <div class="nav-section">Conteúdo</div>
+    <div class="nav-item" onclick="showSection('cortes', this)">✂️ Cortes</div>
+    <div class="nav-item" onclick="showSection('social', this)">📸 Social Media</div>
     <div style="flex:1"></div>
-    <div style="font-size:10px;color:#333;text-align:center;padding:8px">v0.1 MVP</div>
+    <div class="nav-item" onclick="showSection('config', this)">⚙️ Configurações</div>
   </div>
 
-  <!-- MAIN -->
-  <div id="main-content" class="flex-1 overflow-y-auto p-4 flex flex-col gap-4">
+  <!-- MAIN CONTENT -->
+  <div id="main" class="flex-1 overflow-y-auto p-5"></div>
 
-    <!-- Agenda -->
+</div>
+
+<script>
+// Clock
+function updateClock() {
+  const now = new Date();
+  document.getElementById('clock').textContent = now.toLocaleDateString('pt-BR', {weekday:'long',day:'2-digit',month:'long',hour:'2-digit',minute:'2-digit',timeZone:'America/Sao_Paulo'});
+}
+updateClock(); setInterval(updateClock, 30000);
+
+// Todos
+const todos = [
+  {id:1, text:'Preparar apresentação TMF Group (M&A DGA BPO)', tag:'🔴 Urgente', tc:'#ef4444', tb:'#ef444420', done:false},
+  {id:2, text:'Renovar certificado digital DGA Sorocaba (vencido desde 27/01)', tag:'DGA', tc:'#0ea5e9', tb:'#0ea5e920', done:false},
+  {id:3, text:'Confirmar call TMF — janela quarta 04/03 às 14h', tag:'🔴 Urgente', tc:'#ef4444', tb:'#ef444420', done:false},
+  {id:4, text:'Renovar cert. DGA Assist — vence 10/03 (7 dias)', tag:'DGA', tc:'#f59e0b', tb:'#f59e0b20', done:false},
+  {id:5, text:'Revisar cortes do podcast "Vendendo Do Jeito Errado"', tag:'Conteúdo', tc:'#0ea5e9', tb:'#0ea5e920', done:false},
+  {id:6, text:'Conectar Meta Business (aguardando prestador)', tag:'Pendente', tc:'#666', tb:'#66666620', done:false},
+  {id:7, text:'Tailscale Mac mini configurado ✅', tag:'Feito', tc:'#10b981', tb:'#10b98120', done:true},
+  {id:8, text:'LinkedIn API conectado ✅', tag:'Feito', tc:'#10b981', tb:'#10b98120', done:true},
+  {id:9, text:'YouTube 2 canais conectados ✅', tag:'Feito', tc:'#10b981', tb:'#10b98120', done:true},
+];
+
+function toggleTodo(id) {
+  const t = todos.find(x=>x.id===id); if(t) { t.done=!t.done; showSection('dashboard', null, true); }
+}
+function addTodo() {
+  const text = prompt('Nova tarefa:');
+  if(text) { todos.unshift({id:Date.now(),text,tag:'Novo',tc:'#7c3aed',tb:'#7c3aed20',done:false}); showSection('dashboard',null,true); }
+}
+
+// Sections content
+const sections = {
+  dashboard: () => `
+    <div class="section-header">🏠 Dashboard</div>
+    <div class="section-desc">Visão geral do seu dia — agenda, tarefas prioritárias e alertas ativos.</div>
+
     <div class="card">
-      <div class="flex items-center justify-between mb-3">
-        <div style="font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#555">📅 Agenda de Hoje</div>
-        <span id="today-date" style="font-size:10px;color:#555"></span>
+      <div class="card-title">📅 Agenda de Hoje</div>
+      <div class="agenda-item now">
+        <div style="min-width:70px;color:#10b981;font-size:13px;font-weight:600">08:00</div>
+        <div><div style="font-size:15px;font-weight:600">🎓 Imersão StartSe — Dia 2</div><div style="font-size:13px;color:#666;margin-top:4px">Em andamento agora · até 18:00</div></div>
       </div>
-      <div id="agenda-list">
-        <div style="color:#555;font-size:11px;text-align:center;padding:20px">
-          <div class="spin" style="display:inline-block;width:16px;height:16px;border:2px solid #333;border-top-color:#7c3aed;border-radius:50%"></div>
-          <div style="margin-top:8px">Carregando agenda...</div>
-        </div>
+      <div class="agenda-item">
+        <div style="min-width:70px;color:#555;font-size:13px">Amanhã</div>
+        <div><div style="font-size:15px;font-weight:600">📞 Disponível — Call TMF Group</div><div style="font-size:13px;color:#666;margin-top:4px">Quarta 04/03 · Janela sugerida 14h–16h</div></div>
+      </div>
+      <div class="agenda-item soon">
+        <div style="min-width:70px;color:#f59e0b;font-size:13px">Qui 05/03</div>
+        <div><div style="font-size:15px;font-weight:600">💼 DGA + Morgan Stanley</div><div style="font-size:13px;color:#666;margin-top:4px">14:30 · Reunião estratégica</div></div>
+      </div>
+      <div class="agenda-item">
+        <div style="min-width:70px;color:#555;font-size:13px">Sex 06/03</div>
+        <div><div style="font-size:15px;font-weight:600">🎙️ Podcast — Adriana Costa (Siemens)</div><div style="font-size:13px;color:#666;margin-top:4px">08:00–10:00 · Os Executivos</div></div>
       </div>
     </div>
 
-    <!-- Métricas -->
     <div class="card">
-      <div style="font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#555;margin-bottom:12px">📊 Métricas</div>
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
-        <div style="background:#0d0d15;border:1px solid #1a1a2e;border-radius:10px;padding:12px;text-align:center">
-          <div style="font-size:24px;font-weight:700;color:#ec4899">54k</div>
-          <div style="font-size:9px;color:#555;text-transform:uppercase;margin-top:2px">Instagram</div>
-          <div style="font-size:9px;color:#f59e0b;margin-top:4px">API pendente</div>
-        </div>
-        <div style="background:#0d0d15;border:1px solid #1a1a2e;border-radius:10px;padding:12px;text-align:center">
-          <div id="yt-subs" style="font-size:24px;font-weight:700;color:#ef4444">...</div>
-          <div style="font-size:9px;color:#555;text-transform:uppercase;margin-top:2px">YouTube</div>
-          <div id="yt-videos" style="font-size:9px;color:#555;margin-top:4px">...</div>
-        </div>
-        <div style="background:#0d0d15;border:1px solid #1a1a2e;border-radius:10px;padding:12px;text-align:center">
-          <div style="font-size:24px;font-weight:700;color:#7c3aed">30</div>
-          <div style="font-size:9px;color:#555;text-transform:uppercase;margin-top:2px">Alunos Grow Up</div>
-          <div style="font-size:9px;color:#10b981;margin-top:4px">meta: 100</div>
-        </div>
-        <div style="background:#0d0d15;border:1px solid #1a1a2e;border-radius:10px;padding:12px;text-align:center">
-          <div style="font-size:24px;font-weight:700;color:#10b981">15</div>
-          <div style="font-size:9px;color:#555;text-transform:uppercase;margin-top:2px">HOT Leads</div>
-          <div style="font-size:9px;color:#555;margin-top:4px">102 total</div>
-        </div>
+      <div class="card-title">📊 Métricas</div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px">
+        <div class="metric-card"><div class="metric-val" style="color:#ec4899">54k</div><div class="metric-label">Instagram</div><div class="metric-sub" style="color:#f59e0b">API pendente</div></div>
+        <div class="metric-card"><div class="metric-val" style="color:#ef4444">2.2k</div><div class="metric-label">YouTube</div><div class="metric-sub" style="color:#666">55 vídeos</div></div>
+        <div class="metric-card"><div class="metric-val" style="color:#7c3aed">30</div><div class="metric-label">Alunos</div><div class="metric-sub" style="color:#10b981">meta: 100</div></div>
+        <div class="metric-card"><div class="metric-val" style="color:#10b981">15</div><div class="metric-label">HOT Leads</div><div class="metric-sub" style="color:#666">102 total</div></div>
       </div>
     </div>
 
-    <!-- To-Do -->
     <div class="card">
-      <div class="flex items-center justify-between mb-3">
-        <div style="font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#555">✅ To-Do</div>
-        <span onclick="addTodo()" style="font-size:10px;color:#7c3aed;cursor:pointer">+ adicionar</span>
-      </div>
-      <div id="todo-list"></div>
+      <div class="card-title" style="justify-content:space-between">✅ To-Do <span onclick="addTodo()" style="font-size:13px;color:#7c3aed;cursor:pointer;font-weight:400;text-transform:none;letter-spacing:0">+ adicionar</span></div>
+      ${todos.map(t=>`
+        <div class="todo-item" onclick="toggleTodo(${t.id})">
+          <div class="checkbox ${t.done?'done':''}">${t.done?'✓':''}</div>
+          <div style="flex:1;font-size:14px;${t.done?'text-decoration:line-through;color:#444':''}">${t.text}</div>
+          <span style="font-size:11px;padding:2px 8px;border-radius:8px;background:${t.tb};color:${t.tc};white-space:nowrap">${t.tag}</span>
+        </div>
+      `).join('')}
     </div>
 
-    <!-- Status -->
     <div class="card">
-      <div style="font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#555;margin-bottom:10px">🔌 Status dos Sistemas</div>
-      <div style="display:flex;flex-wrap:wrap;gap:6px">
-        <span class="pill" style="background:#10b98115;color:#10b981;border:1px solid #10b98130">✅ Outlook</span>
+      <div class="card-title">🔌 Status dos Sistemas</div>
+      <div style="display:flex;flex-wrap:wrap">
+        <span class="pill" style="background:#10b98115;color:#10b981;border:1px solid #10b98130">✅ Outlook 3 contas</span>
         <span class="pill" style="background:#10b98115;color:#10b981;border:1px solid #10b98130">✅ LinkedIn</span>
         <span class="pill" style="background:#10b98115;color:#10b981;border:1px solid #10b98130">✅ YouTube ×2</span>
         <span class="pill" style="background:#10b98115;color:#10b981;border:1px solid #10b98130">✅ Tailscale</span>
@@ -135,147 +174,254 @@
         <span class="pill" style="background:#ef444415;color:#ef4444;border:1px solid #ef444430">❌ Cert. Sorocaba</span>
       </div>
     </div>
+  `,
 
-  </div>
+  agenda: () => `
+    <div class="section-header">📅 Agenda</div>
+    <div class="section-desc">Seus compromissos da semana. Os itens em <span style="color:#10b981">verde</span> estão acontecendo agora, em <span style="color:#f59e0b">amarelo</span> são os próximos. Pandora monitora e te avisa 1h antes de cada reunião importante.</div>
+    <div class="card">
+      <div class="card-title">Hoje — Terça 03/03</div>
+      <div class="agenda-item now"><div style="min-width:70px;color:#10b981;font-weight:600">08:00</div><div><div style="font-size:15px;font-weight:600">🎓 Imersão StartSe Dia 2</div><div style="font-size:13px;color:#666;margin-top:4px">Em andamento · até 18h</div></div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Quarta 04/03 — Dia livre ✅</div>
+      <div class="alert-card alert-green"><div style="font-weight:600;font-size:15px">Melhor janela para call TMF Group</div><div style="font-size:13px;color:#aaa;margin-top:4px">Sugiro 14h ou 15h — sem compromissos o dia todo. Ideal para uma reunião estratégica de M&A.</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Quinta 05/03</div>
+      <div class="agenda-item"><div style="min-width:70px;color:#555;font-size:13px">14:30</div><div><div style="font-size:15px;font-weight:600">💼 DGA + Morgan Stanley</div><div style="font-size:13px;color:#666;margin-top:4px">Reunião estratégica · 1 hora</div></div></div>
+      <div class="agenda-item"><div style="min-width:70px;color:#555;font-size:13px">17:00</div><div><div style="font-size:15px;font-weight:600">🏥 Tricologista</div></div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Sexta 06/03 — Dia cheio</div>
+      <div class="agenda-item"><div style="min-width:70px;color:#555;font-size:13px">08:00</div><div><div style="font-size:15px;font-weight:600">🎙️ Podcast Os Executivos</div><div style="font-size:13px;color:#666;margin-top:4px">Adriana Costa (Siemens Healthineers) · 2h</div></div></div>
+      <div class="agenda-item"><div style="min-width:70px;color:#555;font-size:13px">12:30</div><div><div style="font-size:15px;font-weight:600">🏥 Urologista</div></div></div>
+      <div class="agenda-item"><div style="min-width:70px;color:#555;font-size:13px">15:00</div><div><div style="font-size:15px;font-weight:600">💆 Laser</div></div></div>
+      <div class="agenda-item"><div style="min-width:70px;color:#555;font-size:13px">19:00</div><div><div style="font-size:15px;font-weight:600">🍽️ Jantar</div></div></div>
+    </div>
+  `,
 
-  <!-- RIGHT PANEL -->
-  <div style="width:260px;background:#0d0d18;border-left:1px solid #1a1a2e;padding:14px;overflow-y:auto;flex-shrink:0">
+  emails: () => `
+    <div class="section-header">📧 E-mails</div>
+    <div class="section-desc">Pandora monitora suas 3 caixas a cada 2 horas e filtra o que realmente importa. Você só vê o que exige atenção — o resto fica invisível.</div>
+    <div class="alert-card alert-red card">
+      <div style="font-size:13px;color:#ef4444;font-weight:600;margin-bottom:6px">🔴 URGENTE — Ação necessária</div>
+      <div style="font-size:16px;font-weight:700">TMF Group — M&A Exploration DGA BPO</div>
+      <div style="font-size:13px;color:#aaa;margin-top:6px">De: lucas.correa@tmf-group.com · 03/03 às 01:22</div>
+      <div style="font-size:14px;color:#ccc;margin-top:8px;line-height:1.6">O TMF Group é uma empresa global de serviços financeiros e BPO com presença em 80+ países. Esse e-mail sugere interesse em explorar uma parceria ou aquisição da DGA BPO. <strong>É um e-mail estratégico e sensível — resposta urgente recomendada.</strong></div>
+      <div style="margin-top:10px"><span style="font-size:12px;padding:4px 10px;border-radius:8px;background:#ef444430;color:#ef4444">Sem resposta há 16h</span></div>
+    </div>
+    <div class="card">
+      <div class="card-title">⚠️ Importantes</div>
+      <div class="email-row"><div style="font-size:15px;font-weight:600;color:#f59e0b">Omie — Certificado Digital Vencido</div><div style="font-size:13px;color:#aaa;margin-top:4px">DGA Business Sorocaba · Cert A1 venceu em 27/01/2026 — já expirado há 35 dias</div></div>
+      <div class="email-row"><div style="font-size:15px;font-weight:600">Clicksign — Documento Finalizado</div><div style="font-size:13px;color:#aaa;margin-top:4px">DGA Contabilidade · documento assinado · 03/03 às 20:23</div></div>
+      <div class="email-row"><div style="font-size:15px;font-weight:600">Bank of America — Wire US$ 2.200</div><div style="font-size:13px;color:#aaa;margin-top:4px">Same Day wire enviado (item #600268528) · confirmar se foi autorizado</div></div>
+      <div class="email-row"><div style="font-size:15px;font-weight:600">Financeiro Mápia — NF e Boleto</div><div style="font-size:13px;color:#aaa;margin-top:4px">DGA · fatura março/2026 · verificar vencimento</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">📋 Contas monitoradas</div>
+      <div class="email-row"><div style="font-size:14px">✅ <strong>douglas@dga.com.br</strong> — principal · monitorada</div></div>
+      <div class="email-row"><div style="font-size:14px">✅ <strong>myoffice@dga.com.br</strong> — escritório · monitorada</div></div>
+      <div class="email-row"><div style="font-size:14px">⚠️ <strong>goga@dga.com.br</strong> — token precisa renovação</div></div>
+    </div>
+  `,
 
-    <div class="rcard">
-      <div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:#444;margin-bottom:8px">📧 E-mails Urgentes</div>
-      <div class="email-item">
-        <div style="font-size:11px;font-weight:600;color:#ef4444;display:flex;justify-content:space-between">🔴 TMF Group <span style="color:#555;font-weight:400">01:22</span></div>
-        <div style="font-size:10px;color:#888">DGA BPO & TMF M&A Exploration</div>
-      </div>
-      <div class="email-item">
-        <div style="font-size:11px;font-weight:600;color:#f59e0b;display:flex;justify-content:space-between">⚠️ Omie <span style="color:#555;font-weight:400">11:01</span></div>
-        <div style="font-size:10px;color:#888">Certificado A1 vencido — DGA Sorocaba</div>
-      </div>
-      <div class="email-item">
-        <div style="font-size:11px;font-weight:600;display:flex;justify-content:space-between">Clicksign <span style="color:#555;font-weight:400">20:23</span></div>
-        <div style="font-size:10px;color:#888">Documento DGA finalizado</div>
+  leads: () => `
+    <div class="section-header">🎯 Leads Grow Up</div>
+    <div class="section-desc">102 contadores qualificados no Grow Up Connect. Pandora classificou cada um por faturamento e porte. Os <span style="color:#ef4444">HOT</span> têm faturamento acima de R$1,8M/ano com 10+ funcionários — fit direto para o Grow Up (R$60k/ano).</div>
+    <div class="card">
+      <div class="card-title" style="color:#ef4444">🔴 HOT — Abordar Agora (15 leads)</div>
+      ${[
+        {i:'MF',n:'Marcelo Ferrari',e:'Gratta Contábil',uf:'PR',fat:'Authority R$4,8–12M',f:'70'},
+        {i:'FF',n:'Felipe Franco',e:'Efe',uf:'SP',fat:'Authority R$4,8–12M',f:'50'},
+        {i:'PV',n:'Phelipe Vilas Boas',e:'PMSG Accounting',uf:'SP',fat:'Scaler R$1,8–4,8M',f:'50'},
+        {i:'MR',n:'Maria Rosineide Ximenes',e:'Obj Contabilidade',uf:'CE',fat:'Scaler R$1,8–4,8M',f:'60'},
+        {i:'MV',n:'Marco Venegas',e:'Venegas Contábil',uf:'SP',fat:'Authority R$4,8–12M',f:'36'},
+      ].map(l=>`
+        <div class="lead-item">
+          <div class="lead-avatar">${l.i}</div>
+          <div style="flex:1">
+            <div style="font-size:15px;font-weight:600">${l.n}</div>
+            <div style="font-size:13px;color:#666;margin-top:2px">${l.e} · ${l.uf} · ${l.f} funcionários</div>
+          </div>
+          <span style="font-size:12px;padding:3px 10px;border-radius:8px;background:#ef444420;color:#ef4444">${l.fat}</span>
+        </div>
+      `).join('')}
+      <div style="font-size:13px;color:#555;margin-top:10px">+ 10 outros HOT leads não exibidos</div>
+    </div>
+    <div class="card">
+      <div class="card-title" style="color:#f59e0b">🟡 Morno — Nutrir (19 leads)</div>
+      <div style="font-size:14px;color:#666">EarlyWalker com 10+ funcionários. Ainda não no momento ideal mas com potencial. Recomendo sequência de conteúdo antes de abordar.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📊 Resumo</div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px">
+        <div class="metric-card"><div class="metric-val" style="color:#ef4444">15</div><div class="metric-label">HOT</div></div>
+        <div class="metric-card"><div class="metric-val" style="color:#f59e0b">19</div><div class="metric-label">Morno</div></div>
+        <div class="metric-card"><div class="metric-val" style="color:#10b981">10</div><div class="metric-label">Frio</div></div>
+        <div class="metric-card"><div class="metric-val" style="color:#555">58</div><div class="metric-label">Baixo</div></div>
       </div>
     </div>
+  `,
 
-    <div class="rcard">
-      <div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:#444;margin-bottom:8px">🎯 HOT Leads</div>
-      <div id="leads-list">
-        <div style="color:#555;font-size:11px;text-align:center;padding:10px">carregando...</div>
+  alunos: () => `
+    <div class="section-header">👥 Alunos Grow Up</div>
+    <div class="section-desc">Você tem 30 alunos ativos no Grow Up. Meta: 100. Cada aluno paga R$60.000/ano. Chegar a 100 representa R$6M/ano em receita recorrente.</div>
+    <div class="card">
+      <div class="card-title">📊 Progresso da Meta</div>
+      <div style="margin-bottom:8px;font-size:14px;color:#aaa">30 de 100 alunos <span style="color:#7c3aed;font-weight:600">(30%)</span></div>
+      <div style="background:#1a1a2e;border-radius:8px;height:16px;overflow:hidden">
+        <div style="width:30%;height:100%;background:linear-gradient(90deg,#7c3aed,#4f46e5);border-radius:8px"></div>
       </div>
-      <div style="text-align:center;margin-top:6px">
-        <span onclick="showSection('leads')" style="font-size:10px;color:#7c3aed;cursor:pointer">Ver todos os 15 →</span>
-      </div>
-    </div>
-
-    <div class="rcard">
-      <div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:#444;margin-bottom:8px">⚠️ Alertas DGA</div>
-      <div class="email-item">
-        <div style="font-size:11px;font-weight:600;color:#ef4444">❌ Cert. Sorocaba</div>
-        <div style="font-size:10px;color:#888">Vencido 27/01 — renovar urgente</div>
-      </div>
-      <div class="email-item">
-        <div style="font-size:11px;font-weight:600;color:#f59e0b">⏰ DGA Assist</div>
-        <div style="font-size:10px;color:#888">Vence em 7 dias — 10/03</div>
-      </div>
-      <div class="email-item">
-        <div style="font-size:11px;font-weight:600;color:#f59e0b">⏰ DGA Barueri</div>
-        <div style="font-size:10px;color:#888">Vence em 16 dias — 19/03</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px">
+        <div class="metric-card"><div class="metric-val" style="color:#7c3aed">30</div><div class="metric-label">Alunos ativos</div></div>
+        <div class="metric-card"><div class="metric-val" style="color:#10b981">R$1,8M</div><div class="metric-label">Receita atual/ano</div></div>
+        <div class="metric-card"><div class="metric-val" style="color:#f59e0b">70</div><div class="metric-label">Vagas restantes</div></div>
       </div>
     </div>
-
-  </div>
-</div>
-
-<script>
-// Clock
-function updateClock() {
-  const now = new Date();
-  const opts = { weekday:'long', day:'2-digit', month:'short', year:'numeric', hour:'2-digit', minute:'2-digit', timeZone:'America/Sao_Paulo' };
-  document.getElementById('clock').textContent = now.toLocaleDateString('pt-BR', opts);
-  document.getElementById('today-date').textContent = now.toLocaleDateString('pt-BR', { day:'2-digit', month:'2-digit', year:'numeric', timeZone:'America/Sao_Paulo' });
-}
-updateClock();
-setInterval(updateClock, 30000);
-
-// Navigation
-function showSection(s) {
-  document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
-  event.currentTarget.classList.add('active');
-}
-
-// Todo
-const todos = [
-  { id:1, text:'Preparar apresentação TMF Group (M&A)', tag:'urgente', tagColor:'#ef4444', tagBg:'#ef444420', done:false },
-  { id:2, text:'Renovar certificado DGA Sorocaba (vencido)', tag:'DGA', tagColor:'#0ea5e9', tagBg:'#0ea5e920', done:false },
-  { id:3, text:'Confirmar call TMF — quarta 04/03', tag:'urgente', tagColor:'#ef4444', tagBg:'#ef444420', done:false },
-  { id:4, text:'Revisar cortes do podcast', tag:'conteúdo', tagColor:'#0ea5e9', tagBg:'#0ea5e920', done:false },
-  { id:5, text:'Tailscale Mac mini configurado', tag:'feito', tagColor:'#10b981', tagBg:'#10b98120', done:true },
-  { id:6, text:'LinkedIn API conectado', tag:'feito', tagColor:'#10b981', tagBg:'#10b98120', done:true },
-];
-
-function renderTodos() {
-  const list = document.getElementById('todo-list');
-  list.innerHTML = todos.map(t => `
-    <div class="todo-item" onclick="toggleTodo(${t.id})">
-      <div class="checkbox ${t.done?'done':''}" style="${t.done?'background:#10b981;border-color:#10b981':''}"></div>
-      <div style="flex:1;${t.done?'text-decoration:line-through;color:#444':''}">${t.text}</div>
-      <span style="font-size:9px;padding:1px 6px;border-radius:8px;background:${t.tagBg};color:${t.tagColor}">${t.tag}</span>
+    <div class="alert-card alert-green card" style="margin-bottom:0">
+      <div style="font-size:15px;font-weight:600">💡 Próximo passo</div>
+      <div style="font-size:14px;color:#aaa;margin-top:6px">15 HOT leads qualificados prontos para abordagem. Cruzar com lista de alunos atuais para remover quem já entrou.</div>
     </div>
-  `).join('');
-}
+  `,
 
-function toggleTodo(id) {
-  const t = todos.find(x => x.id === id);
-  if (t) { t.done = !t.done; renderTodos(); }
-}
+  pipeline: () => `
+    <div class="section-header">📊 Pipeline Grow Up</div>
+    <div class="section-desc">Funil de vendas do Grow Up — do cadastro na comunidade até a entrada como aluno. Pandora monitora cada etapa automaticamente.</div>
+    <div class="card">
+      ${[
+        {stage:'Cadastro no Connect',count:102,color:'#0ea5e9',desc:'Contadores que se inscreveram na comunidade'},
+        {stage:'Qualificados (R$1M+)',count:34,color:'#7c3aed',desc:'Fit com critério de entrada do Grow Up'},
+        {stage:'HOT Leads',count:15,color:'#f59e0b',desc:'Alta probabilidade de conversão'},
+        {stage:'Em abordagem',count:0,color:'#ef4444',desc:'Aguardando início da abordagem'},
+        {stage:'Alunos',count:30,color:'#10b981',desc:'Convertidos'},
+      ].map(s=>`
+        <div style="display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid #1a1a2e">
+          <div style="width:44px;height:44px;border-radius:10px;background:${s.color}20;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:${s.color};flex-shrink:0">${s.count}</div>
+          <div><div style="font-size:15px;font-weight:600">${s.stage}</div><div style="font-size:13px;color:#666;margin-top:2px">${s.desc}</div></div>
+        </div>
+      `).join('')}
+    </div>
+  `,
 
-function addTodo() {
-  const text = prompt('Nova tarefa:');
-  if (text) {
-    todos.unshift({ id: Date.now(), text, tag:'novo', tagColor:'#7c3aed', tagBg:'#7c3aed20', done:false });
-    renderTodos();
+  riscos: () => `
+    <div class="section-header">⚠️ Painel de Riscos DGA</div>
+    <div class="section-desc">Alertas operacionais e riscos ativos da DGA. O comitê de riscos recebe e decide como enfrentar cada ocorrência. Em breve este painel será integrado ao DGA BI.</div>
+    <div class="alert-card alert-red">
+      <div style="font-size:16px;font-weight:700">❌ Certificado Digital Vencido</div>
+      <div style="font-size:14px;color:#aaa;margin-top:6px">DGA Business Sorocaba · Cert A1 venceu em 27/01/2026</div>
+      <div style="font-size:13px;color:#ef4444;margin-top:6px;font-weight:600">⚠️ Vencido há 35 dias — operações podem estar comprometidas</div>
+    </div>
+    <div class="alert-card alert-yellow">
+      <div style="font-size:16px;font-weight:700">⏰ DGA Assist — Vence em 7 dias</div>
+      <div style="font-size:14px;color:#aaa;margin-top:6px">Certificado A1 · vence em 10/03/2026</div>
+    </div>
+    <div class="alert-card alert-yellow">
+      <div style="font-size:16px;font-weight:700">⏰ DGA Corporate Barueri — Vence em 16 dias</div>
+      <div style="font-size:14px;color:#aaa;margin-top:6px">Certificado A1 · vence em 19/03/2026</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📋 Comitê de Riscos</div>
+      <div style="font-size:14px;color:#666;line-height:1.7">O comitê recebe ocorrências por e-mail e decide ações. Em breve Pandora vai monitorar os e-mails do comitê, classificar por gravidade e popular este painel automaticamente — sem precisar de planilha.</div>
+    </div>
+  `,
+
+  operacional: () => `
+    <div class="section-header">🏢 Operacional DGA</div>
+    <div class="section-desc">Visão operacional da DGA — entregas, fechamentos e indicadores do escritório.</div>
+    <div class="card">
+      <div class="card-title">📊 Fechamento Fevereiro/2026</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+        <div class="metric-card"><div class="metric-val" style="color:#10b981">53</div><div class="metric-label">Entregas</div></div>
+        <div class="metric-card"><div class="metric-val" style="color:#7c3aed">21</div><div class="metric-label">Semana atual</div></div>
+        <div class="metric-card"><div class="metric-val" style="color:#10b981">20/21</div><div class="metric-label">No prazo</div></div>
+      </div>
+    </div>
+    <div class="alert-card alert-yellow card" style="margin-bottom:0">
+      <div style="font-size:15px;font-weight:600">💡 Próxima integração</div>
+      <div style="font-size:14px;color:#aaa;margin-top:6px">Pandora vai conectar ao Omie/Acessórias para puxar indicadores operacionais automaticamente.</div>
+    </div>
+  `,
+
+  cortes: () => `
+    <div class="section-header">✂️ Cortes de Conteúdo</div>
+    <div class="section-desc">Pandora analisa seus vídeos do YouTube, identifica os melhores momentos e sugere cortes prontos para Instagram Reels e LinkedIn. Você aprova e publica.</div>
+    <div class="alert-card alert-green">
+      <div style="font-size:16px;font-weight:700">✅ Análise concluída</div>
+      <div style="font-size:14px;color:#aaa;margin-top:6px">Vídeo: "Você Está Vendendo Do Jeito Errado!" · Os Executivos · 51 min</div>
+    </div>
+    <div class="card">
+      <div class="card-title">🎬 4 Cortes Sugeridos</div>
+      ${[
+        {n:'Corte 1 — O Mito do Vendedor Nato',t:'29:28 → 30:28',d:'60s',i:'Instagram Reels / LinkedIn'},
+        {n:'Corte 2 — Não Delegue Sua Carreira',t:'30:42 → 32:10',d:'88s',i:'LinkedIn (mais forte)'},
+        {n:'Corte 3 — Quem Não É Visto Não É Lembrado',t:'32:42 → 33:45',d:'63s',i:'Instagram Reels'},
+        {n:'Corte 4 — A IA Vai Substituir Parte das Vendas',t:'42:13 → 43:35',d:'82s',i:'LinkedIn / debates'},
+      ].map((c,i)=>`
+        <div style="padding:12px;background:#0d0d15;border-radius:10px;margin-bottom:8px">
+          <div style="font-size:15px;font-weight:600">${c.n}</div>
+          <div style="font-size:13px;color:#666;margin-top:4px">${c.t} · ${c.d} · Ideal para: ${c.i}</div>
+        </div>
+      `).join('')}
+      <div style="font-size:13px;color:#666;margin-top:8px">Próximo passo: gerar os arquivos de vídeo cortados para você aprovar antes de publicar.</div>
+    </div>
+  `,
+
+  social: () => `
+    <div class="section-header">📸 Social Media</div>
+    <div class="section-desc">Suas plataformas conectadas e pendentes. Quando o Meta Business estiver configurado, Pandora vai postar conteúdo aprovado automaticamente no Instagram e Facebook.</div>
+    <div class="card">
+      <div class="card-title">✅ Conectadas</div>
+      <div class="lead-item"><div class="lead-avatar" style="background:#0ea5e920;color:#0ea5e9">in</div><div><div style="font-size:15px;font-weight:600">LinkedIn</div><div style="font-size:13px;color:#666">Douglas Gomes Filho · conectado · pode postar</div></div><span class="pill" style="background:#10b98115;color:#10b981;border:1px solid #10b98130">✅ online</span></div>
+      <div class="lead-item"><div class="lead-avatar" style="background:#ef444420;color:#ef4444">▶</div><div><div style="font-size:15px;font-weight:600">YouTube — @Douglas.GomesFilho</div><div style="font-size:13px;color:#666">2.230 inscritos · 55 vídeos</div></div><span class="pill" style="background:#10b98115;color:#10b981;border:1px solid #10b98130">✅ online</span></div>
+      <div class="lead-item"><div class="lead-avatar" style="background:#ef444420;color:#ef4444">▶</div><div><div style="font-size:15px;font-weight:600">YouTube — Os Executivos</div><div style="font-size:13px;color:#666">1.000 inscritos · 133 episódios</div></div><span class="pill" style="background:#10b98115;color:#10b981;border:1px solid #10b98130">✅ online</span></div>
+    </div>
+    <div class="card">
+      <div class="card-title">⏳ Pendentes</div>
+      <div class="lead-item"><div class="lead-avatar" style="background:#ec489920;color:#ec4899">ig</div><div><div style="font-size:15px;font-weight:600">Instagram @douglas.dgf</div><div style="font-size:13px;color:#666">54.000 seguidores · aguardando Meta Business</div></div><span class="pill" style="background:#f59e0b15;color:#f59e0b;border:1px solid #f59e0b30">⏳ prestador</span></div>
+      <div class="lead-item"><div class="lead-avatar" style="background:#0ea5e920;color:#0ea5e9">fb</div><div><div style="font-size:15px;font-weight:600">Facebook</div><div style="font-size:13px;color:#666">Aguardando Meta Business API</div></div><span class="pill" style="background:#f59e0b15;color:#f59e0b;border:1px solid #f59e0b30">⏳ prestador</span></div>
+      <div class="lead-item"><div class="lead-avatar" style="background:#10b98120;color:#10b981">sp</div><div><div style="font-size:15px;font-weight:600">Spotify — Os Executivos</div><div style="font-size:13px;color:#666">Podcast distribuído · API não conectada</div></div><span class="pill" style="background:#f59e0b15;color:#f59e0b;border:1px solid #f59e0b30">⏳ pendente</span></div>
+    </div>
+  `,
+
+  config: () => `
+    <div class="section-header">⚙️ Configurações</div>
+    <div class="section-desc">Configurações do Pandora Control e dos agentes ativos.</div>
+    <div class="card">
+      <div class="card-title">🤖 Agentes Ativos</div>
+      ${[
+        {i:'🔮',n:'Pandora',d:'Orquestradora central — você fala aqui',m:'Claude Sonnet',s:'✅'},
+        {i:'📧',n:'E-mail Monitor',d:'Verifica 3 caixas a cada 2h',m:'Claude Haiku',s:'✅'},
+        {i:'✍️',n:'Conteúdo',d:'Gera posts, roteiros e captions',m:'Claude Haiku',s:'✅'},
+        {i:'🎬',n:'Cortes',d:'Transcreve e corta vídeos YouTube',m:'Claude Sonnet',s:'✅'},
+        {i:'🎯',n:'Leads',d:'Qualifica cadastros do Grow Up Connect',m:'Claude Haiku',s:'🔜'},
+      ].map(a=>`
+        <div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #1a1a2e">
+          <div style="font-size:22px">${a.i}</div>
+          <div style="flex:1"><div style="font-size:15px;font-weight:600">${a.n}</div><div style="font-size:13px;color:#666;margin-top:2px">${a.d}</div></div>
+          <span style="font-size:12px;padding:2px 8px;border-radius:8px;background:#1a1a2e;color:#666">${a.m}</span>
+          <span style="font-size:14px">${a.s}</span>
+        </div>
+      `).join('')}
+    </div>
+    <div class="card">
+      <div class="card-title">🔔 Heartbeat</div>
+      <div style="font-size:14px;color:#aaa;line-height:1.7">Pandora verifica automaticamente e-mails, agenda e leads a cada <strong style="color:#fff">1 hora</strong>. Silêncio total das <strong style="color:#fff">23h às 8h</strong>. Alertas só quando há algo relevante.</div>
+    </div>
+  `
+};
+
+function showSection(name, el, silent) {
+  if (!silent) {
+    document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+    if (el) el.classList.add('active');
   }
+  const content = sections[name];
+  document.getElementById('main').innerHTML = content ? content() : `<div class="section-header">${name}</div><div class="section-desc">Em breve.</div>`;
 }
 
-renderTodos();
-
-// Agenda
-const agenda = [
-  { time:'08:00', title:'🎓 Imersão StartSe — Dia 2', sub:'Em andamento · até 18:00', type:'now' },
-  { time:'Amanhã', title:'📅 Disponível — Call TMF', sub:'Quarta 04/03 · janela sugerida 14h–16h', type:'' },
-  { time:'Qui 05/03', title:'💼 DGA + Morgan Stanley', sub:'14:30 · 1 hora', type:'soon' },
-  { time:'Sex 06/03', title:'🎙️ Podcast — Adriana Costa (Siemens)', sub:'08:00–10:00', type:'' },
-];
-document.getElementById('agenda-list').innerHTML = agenda.map(a => `
-  <div class="agenda-item ${a.type}">
-    <div style="font-size:11px;color:#555;min-width:55px;margin-top:1px">${a.time}</div>
-    <div>
-      <div style="font-size:12px;font-weight:500">${a.title}</div>
-      <div style="font-size:10px;color:#555;margin-top:2px">${a.sub}</div>
-    </div>
-  </div>
-`).join('');
-
-// HOT Leads
-const hotLeads = [
-  { initials:'MF', name:'Marcelo Ferrari', sub:'Gratta Contábil · PR · 70 func' },
-  { initials:'FF', name:'Felipe Franco', sub:'Efe · SP · 50 func' },
-  { initials:'MV', name:'Marco Venegas', sub:'Venegas Contábil · SP · 36 func' },
-];
-document.getElementById('leads-list').innerHTML = hotLeads.map(l => `
-  <div style="display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid #1a1a2e">
-    <div style="width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#7c3aed40,#4f46e560);display:flex;align-items:center;justify-content:center;font-size:10px;flex-shrink:0">${l.initials}</div>
-    <div>
-      <div style="font-size:11px;font-weight:600">${l.name}</div>
-      <div style="font-size:10px;color:#555">${l.sub}</div>
-    </div>
-  </div>
-`).join('');
-
-// Badges update
-document.getElementById('badge-urgent').textContent = '🔴 2 urgentes';
-document.getElementById('badge-next').textContent = '📅 StartSe hoje';
-document.getElementById('badge-sys').textContent = '✅ Sistemas OK';
+// Init
+showSection('dashboard', document.querySelector('.nav-item.active'));
 </script>
 </body>
 </html>
