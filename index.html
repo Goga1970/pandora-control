@@ -306,25 +306,25 @@ const sections = {
 
   riscos: () => `
     <div class="section-header">⚠️ Comitê de Riscos DGA</div>
-    <div class="section-desc">Alertas operacionais e riscos ativos da DGA — sincronizado automaticamente com os emails do Comitê de Riscos. Última sync: 2026-03-25 17:40 UTC</div>
+    <div class="section-desc">Alertas operacionais e riscos ativos da DGA — sincronizado automaticamente com os emails do Comitê de Riscos. Última sync: 2026-03-25 18:09 UTC</div>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px">
-      <div class="metric-card"><div class="metric-val" style="color:#ef4444">153</div><div class="metric-label">Total Riscos</div></div>
-      <div class="metric-card"><div class="metric-val" style="color:#ef4444">28</div><div class="metric-label">Alta Prioridade</div></div>
-      <div class="metric-card"><div class="metric-val" style="color:#f59e0b">97</div><div class="metric-label">Média Prioridade</div></div>
-      <div class="metric-card"><div class="metric-val" style="color:#10b981">28</div><div class="metric-label">Baixa Prioridade</div></div>
+      <div class="metric-card"><div class="metric-val" style="color:#ef4444">151</div><div class="metric-label">Total Riscos</div></div>
+      <div class="metric-card"><div class="metric-val" style="color:#ef4444">36</div><div class="metric-label">Alta Prioridade</div></div>
+      <div class="metric-card"><div class="metric-val" style="color:#f59e0b">96</div><div class="metric-label">Média Prioridade</div></div>
+      <div class="metric-card"><div class="metric-val" style="color:#10b981">19</div><div class="metric-label">Baixa Prioridade</div></div>
     </div>
     <div class="card">
-      <div class="card-title">🔴 Alta Prioridade — 28 riscos</div>
+      <div class="card-title">🔴 Alta Prioridade — 36 riscos</div>
         <div style="padding:12px;background:#ef444408;border-radius:10px;border-left:3px solid #ef4444;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div style="font-size:14px;font-weight:600;color:#f87171">INFOX</div>
+            <div style="font-size:14px;font-weight:600;color:#f87171">Infox</div>
             <div style="display:flex;gap:8px;align-items:center">
               <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 1.745,26</span>
               <span style="font-size:11px;color:#666">2026-03-25</span>
             </div>
           </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">DARF</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Compensações indevidas em PER/DCOMP geram pendência de R$ 1.745,26 com multa e juros, exigindo recolhimento e retificação para cessar notificações.</div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">PER/DCOMP e compensações indevidas</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Compensações de tributos sem lastro válido geraram notificações e exposição de R$ 1.745,26 a recolher com juros e multa.</div>
         </div>
         <div style="padding:12px;background:#ef444408;border-radius:10px;border-left:3px solid #ef4444;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -334,19 +334,30 @@ const sections = {
               <span style="font-size:11px;color:#666">2026-03-23</span>
             </div>
           </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">DARF</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Compensações indevidas em PER/DCOMP geram exposição de R$ 1.745,26 a recolher com multa e juros, gerando notificações fiscais.</div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">PER/DCOMP incorreto e compensação indevida</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Compensações de tributos sem lastro válido geraram notificações e exposição de R$ 1.745,26 a recolher com juros e multa, necessitando correção do PER/DCOMP e retificação das DCOMPs para regularização.</div>
         </div>
         <div style="padding:12px;background:#ef444408;border-radius:10px;border-left:3px solid #ef4444;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
             <div style="font-size:14px;font-weight:600;color:#f87171">Aurum</div>
             <div style="display:flex;gap:8px;align-items:center">
-              <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 5.500,34</span>
+              <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 31.086,09</span>
               <span style="font-size:11px;color:#666">2026-03-11</span>
             </div>
           </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Retificação necessária por créditos indevidos em IRPJ, CSLL, PIS e COFINS com multas e juros totais superiores a R$ 5.000.</div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">IRPJ/CSLL/PIS/COFINS</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Necessidade de retificação da apuração e recolhimento de valores de IRPJ, CSLL, PIS e COFINS referentes a 06/2025, 07/2025 e 09/2025 devido a créditos indevidos por retenções consideradas incorretamente.</div>
+        </div>
+        <div style="padding:12px;background:#ef444408;border-radius:10px;border-left:3px solid #ef4444;margin-bottom:8px">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start">
+            <div style="font-size:14px;font-weight:600;color:#f87171">Goomer</div>
+            <div style="display:flex;gap:8px;align-items:center">
+              
+              <span style="font-size:11px;color:#666">2026-03-09</span>
+            </div>
+          </div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">EFD ICMS/IPI, DIFAL</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Foram identificadas 13 EFD ICMS/IPI transmitidas incorretamente com lançamento indevido de créditos de ICMS e DIFAL a recolher não efetuado desde maio/2024, gerando risco fiscal relevante.</div>
         </div>
         <div style="padding:12px;background:#ef444408;border-radius:10px;border-left:3px solid #ef4444;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -356,19 +367,8 @@ const sections = {
               <span style="font-size:11px;color:#666">2026-03-09</span>
             </div>
           </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">ICMS</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Erro operacional na EFD ICMS/IPI com crédito indevido e DIFAL não recolhido desde maio/2024, gerando multa e juros.</div>
-        </div>
-        <div style="padding:12px;background:#ef444408;border-radius:10px;border-left:3px solid #ef4444;margin-bottom:8px">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div style="font-size:14px;font-weight:600;color:#f87171">Goomer</div>
-            <div style="display:flex;gap:8px;align-items:center">
-              <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 8.400</span>
-              <span style="font-size:11px;color:#666">2026-03-09</span>
-            </div>
-          </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Erro operacional na transmissão de 13 EFD ICMS/IPI com crédito indevido e DIFAL não recolhido, gerando multa e juros totais de R$ 8.400.</div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">ICMS/IPI e DIFAL</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Foram identificadas 13 EFD ICMS/IPI transmitidas incorretamente com saldo credor indevido e DIFAL não recolhido, gerando um impacto total estimado de R$ 8.400,00 entre principal, multa e juros.</div>
         </div>
         <div style="padding:12px;background:#ef444408;border-radius:10px;border-left:3px solid #ef4444;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -379,7 +379,18 @@ const sections = {
             </div>
           </div>
           <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">IRRF</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Retificações de IRRF sobre aluguéis pagos a PF sem retenção e escrituração, gerando multa e juros elevados.</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Retificações de IRRF sobre aluguéis pagos a pessoa física não retidos e não escriturados, gerando débito de R$ 23.750,19 incluindo principal, multa e juros.</div>
+        </div>
+        <div style="padding:12px;background:#ef444408;border-radius:10px;border-left:3px solid #ef4444;margin-bottom:8px">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start">
+            <div style="font-size:14px;font-weight:600;color:#f87171">Veedha</div>
+            <div style="display:flex;gap:8px;align-items:center">
+              
+              <span style="font-size:11px;color:#666">2026-02-24</span>
+            </div>
+          </div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">IRRF, Multa, Juros</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Falha na escrituração de nota fiscal de outubro/2025 lançada em pasta errada e não registrada no fechamento de novembro, gerando multas e juros por retificação da REINF e atraso no tratamento do IRRF.</div>
         </div>
         <div style="padding:12px;background:#ef444408;border-radius:10px;border-left:3px solid #ef4444;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -389,30 +400,30 @@ const sections = {
               <span style="font-size:11px;color:#666">2026-02-18</span>
             </div>
           </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Simples Nacional</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">CNPJ ultrapassou limite do Simples Nacional e foi excluído, exigindo recalculo da folha de pagamento sob novo regime (Lucro Presumido).</div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Exclusão Simples Nacional e retificação de folha de pagamento</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">O cliente ultrapassou o limite de faturamento do Simples Nacional em novembro/2025, resultando na exclusão do regime e necessidade de retificação da folha de pagamento de janeiro/2026 sob o novo regime de Lucro Presumido.</div>
+        </div>
+        <div style="padding:12px;background:#ef444408;border-radius:10px;border-left:3px solid #ef4444;margin-bottom:8px">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start">
+            <div style="font-size:14px;font-weight:600;color:#f87171">BEARBERRIES</div>
+            <div style="display:flex;gap:8px;align-items:center">
+              
+              <span style="font-size:11px;color:#666">2026-02-17</span>
+            </div>
+          </div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">FUNRURAL</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Guia de FUNRURAL referente a 12/2025 enviada com principal e juros, com processo de afastamento da multa em andamento, indicando risco de multa vencida.</div>
         </div>
         <div style="padding:12px;background:#ef444408;border-radius:10px;border-left:3px solid #ef4444;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
             <div style="font-size:14px;font-weight:600;color:#f87171">BEARBERRIES</div>
             <div style="display:flex;gap:8px;align-items:center">
               <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 5.959,02</span>
-              <span style="font-size:11px;color:#666">2026-02-17</span>
+              <span style="font-size:11px;color:#666">2026-02-13</span>
             </div>
           </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Guia do FUNRURAL 12/2025 com principal, multa e juros totalizando R$ 5.959,02; risco de multa e necessidade de processo administrativo para afastamento.</div>
-        </div>
-        <div style="padding:12px;background:#ef444408;border-radius:10px;border-left:3px solid #ef4444;margin-bottom:8px">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div style="font-size:14px;font-weight:600;color:#f87171">MR Service</div>
-            <div style="display:flex;gap:8px;align-items:center">
-              
-              <span style="font-size:11px;color:#666">2026-02-17</span>
-            </div>
-          </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Cliente com histórico de não pagamento de impostos em dia, risco de multas e necessidade de regularização urgente.</div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">FUNRURAL</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Guia do FUNRURAL 12/2025 não declarada, com multa e juros totalizando R$ 5.959,02, risco de autuação e necessidade de avaliação para denúncia espontânea.</div>
         </div>
         <div style="padding:12px;background:#ef444408;border-radius:10px;border-left:3px solid #ef4444;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -422,19 +433,8 @@ const sections = {
               <span style="font-size:11px;color:#666">2026-02-13</span>
             </div>
           </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Não houve retenção do FUNRURAL em 12/2025, gerando multa, juros e principal totalizando R$ 5.959,02, com possibilidade de denúncia espontânea.</div>
-        </div>
-        <div style="padding:12px;background:#ef444408;border-radius:10px;border-left:3px solid #ef4444;margin-bottom:8px">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div style="font-size:14px;font-weight:600;color:#f87171">BEARBERRIES</div>
-            <div style="display:flex;gap:8px;align-items:center">
-              <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 5.421,73</span>
-              <span style="font-size:11px;color:#666">2026-02-13</span>
-            </div>
-          </div>
           <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">FUNRURAL</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Retenção de FUNRURAL não aplicada em 12/2025, gerando débito de R$ 5.421,73 e risco de multa e juros futuros.</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Não houve retenção do FUNRURAL na competência 12/2025, gerando multa, juros e valor principal totalizando R$ 5.959,02, com possibilidade de denúncia espontânea para regularização.</div>
         </div>
         <div style="padding:12px;background:#ef444408;border-radius:10px;border-left:3px solid #ef4444;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -445,18 +445,18 @@ const sections = {
             </div>
           </div>
           <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">ICMS</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Documentos de saída não escriturados nas competências 06/2025 e 08/2025 geraram pendência de ICMS a recolher de R$ 21.442,59, com parte dos créditos não regularizados.</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Documentos de saída não escriturados nas competências 06/2025 e 08/2025 resultaram em ICMS a recolher de R$ 10.788,73 e R$ 13.653,86, com apenas parte dos créditos identificados para regularização.</div>
         </div>
         <div style="padding:12px;background:#ef444408;border-radius:10px;border-left:3px solid #ef4444;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div style="font-size:14px;font-weight:600;color:#f87171">Perim</div>
+            <div style="font-size:14px;font-weight:600;color:#f87171">não informado</div>
             <div style="display:flex;gap:8px;align-items:center">
-              <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 22.442,59</span>
+              <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 24.442,59</span>
               <span style="font-size:11px;color:#666">2026-02-12</span>
             </div>
           </div>
           <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">ICMS</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Documentos de saída não escriturados nas competências 06/2025 e 08/2025 geraram pendência de ICMS a recolher de R$ 22.442,59, com parte dos créditos não regularizados.</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Documentos de saída não escriturados nas competências 06/2025 e 08/2025 geraram ICMS a recolher de R$ 24.442,59, com pendência remanescente após créditos identificados, sem conhecimento do cliente.</div>
         </div>
         <div style="padding:12px;background:#ef444408;border-radius:10px;border-left:3px solid #ef4444;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -467,7 +467,7 @@ const sections = {
             </div>
           </div>
           <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Protesto</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Existência de protesto relacionado ao cliente Brasmolde, com provisão financeira prevista para pagamento.</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Existe um risco de protesto relacionado ao cliente BrasMolde, indicando possível inadimplência ou pendência financeira grave.</div>
         </div>
         <div style="padding:12px;background:#ef444408;border-radius:10px;border-left:3px solid #ef4444;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -478,7 +478,18 @@ const sections = {
             </div>
           </div>
           <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Protesto</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Existência de protesto relacionado ao cliente Brasmolde, indicando risco operacional e financeiro iminente.</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Existência de protesto relacionado ao cliente Brasmolde, requerendo comunicação imediata para o remetente.</div>
+        </div>
+        <div style="padding:12px;background:#ef444408;border-radius:10px;border-left:3px solid #ef4444;margin-bottom:8px">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start">
+            <div style="font-size:14px;font-weight:600;color:#f87171">Asset1 Crédito e Curado Bar</div>
+            <div style="display:flex;gap:8px;align-items:center">
+              
+              <span style="font-size:11px;color:#666">2026-02-08</span>
+            </div>
+          </div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Existem multas por falha no fluxo de retenções não encaminhadas, indicando risco de penalidades por não conformidade.</div>
         </div>
         <div style="padding:12px;background:#ef444408;border-radius:10px;border-left:3px solid #ef4444;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -489,7 +500,18 @@ const sections = {
             </div>
           </div>
           <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Protesto</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Há menção a provisionamento relacionado a protesto, indicando risco operacional e financeiro iminente para Brasmolde.</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Existência de protesto relacionado ao cliente Brasmolde, indicando risco de inadimplência ou problemas financeiros.</div>
+        </div>
+        <div style="padding:12px;background:#ef444408;border-radius:10px;border-left:3px solid #ef4444;margin-bottom:8px">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start">
+            <div style="font-size:14px;font-weight:600;color:#f87171">MR Service</div>
+            <div style="display:flex;gap:8px;align-items:center">
+              
+              <span style="font-size:11px;color:#666">2026-02-04</span>
+            </div>
+          </div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">PIS/COFINS</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Não houve apuração de PIS e COFINS na competência 03/2025, gerando risco de autuação e cobrança de juros e multa.</div>
         </div>
         <div style="padding:12px;background:#ef444408;border-radius:10px;border-left:3px solid #ef4444;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -499,19 +521,30 @@ const sections = {
               <span style="font-size:11px;color:#666">2026-02-04</span>
             </div>
           </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Retenções</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Não aplicação da retenção do FUNRURAL em 12/2025 gerou falta de guia e possível multa, valor do imposto não recolhido é R$ 5.241,00.</div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">FUNRURAL</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Retenção do FUNRURAL não aplicada na competência 12/2025, gerando falta de guia e possível débito tributário.</div>
         </div>
         <div style="padding:12px;background:#ef444408;border-radius:10px;border-left:3px solid #ef4444;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div style="font-size:14px;font-weight:600;color:#f87171">Seloserv</div>
+            <div style="font-size:14px;font-weight:600;color:#f87171">Brasmolde</div>
             <div style="display:flex;gap:8px;align-items:center">
               
               <span style="font-size:11px;color:#666">2026-01-30</span>
             </div>
           </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multa MAED por atraso na entrega da DCTFWeb sob responsabilidade da DGA para Seloserv e Ricardo Saretti.</div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Protesto</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Existência de protesto relacionado ao cliente Brasmolde, indicando risco de penalidades e necessidade de providências imediatas.</div>
+        </div>
+        <div style="padding:12px;background:#ef444408;border-radius:10px;border-left:3px solid #ef4444;margin-bottom:8px">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start">
+            <div style="font-size:14px;font-weight:600;color:#f87171">RICARDO SARETTI e SELOSERV</div>
+            <div style="display:flex;gap:8px;align-items:center">
+              
+              <span style="font-size:11px;color:#666">2026-01-30</span>
+            </div>
+          </div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa MAED DCTFWeb</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multa relacionada à MAED na DCTFWeb, indicando possível pendência fiscal grave.</div>
         </div>
         <div style="padding:12px;background:#ef444408;border-radius:10px;border-left:3px solid #ef4444;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -521,19 +554,8 @@ const sections = {
               <span style="font-size:11px;color:#666">2026-01-30</span>
             </div>
           </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multa MAED por atraso na entrega da DCTFWeb para Seloserv (06/2025) e Ricardo Saretti (04/2025), com risco de exclusão do Simples Nacional.</div>
-        </div>
-        <div style="padding:12px;background:#ef444408;border-radius:10px;border-left:3px solid #ef4444;margin-bottom:8px">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div style="font-size:14px;font-weight:600;color:#f87171">Seloserv e Ricardo Saretti</div>
-            <div style="display:flex;gap:8px;align-items:center">
-              
-              <span style="font-size:11px;color:#666">2026-01-30</span>
-            </div>
-          </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multas MAED por atraso na entrega da DCTFWeb para Seloserv (06/2025) e Ricardo Saretti (04/2025), com risco de exclusão do Simples Nacional se não pagas até o prazo final.</div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa MAED DCTFWeb</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multa por atraso na entrega da DCTFWeb para Seloserv (competência 06/2025) e Ricardo Saretti (competência 04/2025), com solicitação de pagamento imediato.</div>
         </div>
         <div style="padding:12px;background:#ef444408;border-radius:10px;border-left:3px solid #ef4444;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -543,89 +565,89 @@ const sections = {
               <span style="font-size:11px;color:#666">2026-01-29</span>
             </div>
           </div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa MAED DCTFWeb</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multa por atraso na entrega da DCTFWeb para as competências 06/2025 (Seloserv) e 04/2025 (Ricardo Saretti), com prazo final iminente para pagamento visando inclusão no Simples Nacional.</div>
+        </div>
+        <div style="padding:12px;background:#ef444408;border-radius:10px;border-left:3px solid #ef4444;margin-bottom:8px">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start">
+            <div style="font-size:14px;font-weight:600;color:#f87171">NANIACOS FRANQUEADORA, RAIZES DO CAMPO COMERCIO, SK NF FRANCHISING, VEEDHA PARTICIPAÇÕES</div>
+            <div style="display:flex;gap:8px;align-items:center">
+              
+              <span style="font-size:11px;color:#666">2026-01-29</span>
+            </div>
+          </div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa por não entrega de Documentação na Prefeitura de SP</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multa aplicada por não entrega de documentação na Prefeitura de São Paulo para múltiplos clientes, indicando risco de penalidades e necessidade de regularização imediata.</div>
+        </div>
+        <div style="padding:12px;background:#ef444408;border-radius:10px;border-left:3px solid #ef4444;margin-bottom:8px">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start">
+            <div style="font-size:14px;font-weight:600;color:#f87171">RAIZES DO CAMPO COMERCIO, SK NF FRANCHISING, VEEDHA PARTICIPAÇÕES</div>
+            <div style="display:flex;gap:8px;align-items:center">
+              
+              <span style="font-size:11px;color:#666">2026-01-28</span>
+            </div>
+          </div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa por não entrega de Documentação na Prefeitura de SP</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multa aplicada por não entrega de documentação na Prefeitura de São Paulo para três clientes identificados.</div>
+        </div>
+        <div style="padding:12px;background:#ef444408;border-radius:10px;border-left:3px solid #ef4444;margin-bottom:8px">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start">
+            <div style="font-size:14px;font-weight:600;color:#f87171">NANIACOS FRANQUEADORA</div>
+            <div style="display:flex;gap:8px;align-items:center">
+              
+              <span style="font-size:11px;color:#666">2026-01-28</span>
+            </div>
+          </div>
           <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multa MAED por atraso na entrega da DCTFWeb para competências 04/2025 e 06/2025, com risco de exclusão do Simples Nacional se não paga até o prazo final.</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multa por não entrega de documentação na Prefeitura de São Paulo.</div>
         </div>
         <div style="padding:12px;background:#ef444408;border-radius:10px;border-left:3px solid #ef4444;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
             <div style="font-size:14px;font-weight:600;color:#f87171">Naniacos Franqueadora LTDA</div>
             <div style="display:flex;gap:8px;align-items:center">
-              <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 1.654,84</span>
+              <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 3.309,69</span>
               <span style="font-size:11px;color:#666">2026-01-28</span>
             </div>
           </div>
           <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multa por não entrega de documentação à Prefeitura de SP, com prazo para pagamento com desconto até 30/01.</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multa por não entrega de documentação na Prefeitura de São Paulo, com prazo para pagamento com desconto até 30/01.</div>
         </div>
         <div style="padding:12px;background:#ef444408;border-radius:10px;border-left:3px solid #ef4444;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div style="font-size:14px;font-weight:600;color:#f87171">DGA</div>
+            <div style="font-size:14px;font-weight:600;color:#f87171">NANIACOS FRANQUEADORA</div>
+            <div style="display:flex;gap:8px;align-items:center">
+              
+              <span style="font-size:11px;color:#666">2026-01-28</span>
+            </div>
+          </div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multa por não entrega de documentação na Prefeitura de São Paulo.</div>
+        </div>
+        <div style="padding:12px;background:#ef444408;border-radius:10px;border-left:3px solid #ef4444;margin-bottom:8px">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start">
+            <div style="font-size:14px;font-weight:600;color:#f87171">Brasmolde</div>
             <div style="display:flex;gap:8px;align-items:center">
               
               <span style="font-size:11px;color:#666">2026-01-26</span>
             </div>
           </div>
           <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Protesto</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Título da nota fiscal nº 6241 lançado com data de vencimento incorreta, podendo gerar protesto.</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Existência de protesto relacionado ao cliente Brasmolde, indicando risco de multa e restrição financeira.</div>
         </div>
         <div style="padding:12px;background:#ef444408;border-radius:10px;border-left:3px solid #ef4444;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div style="font-size:14px;font-weight:600;color:#f87171">JK A1</div>
+            <div style="font-size:14px;font-weight:600;color:#f87171">Brasmolde</div>
             <div style="display:flex;gap:8px;align-items:center">
               
-              <span style="font-size:11px;color:#666">2026-01-08</span>
+              <span style="font-size:11px;color:#666">2026-01-26</span>
             </div>
           </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multa DCTF Mensal com vencimento em 09/01/2026 e prazo de regularização até 24/12/2025, risco de multa vencida ou vencendo.</div>
-        </div>
-        <div style="padding:12px;background:#ef444408;border-radius:10px;border-left:3px solid #ef4444;margin-bottom:8px">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div style="font-size:14px;font-weight:600;color:#f87171">JK A1</div>
-            <div style="display:flex;gap:8px;align-items:center">
-              
-              <span style="font-size:11px;color:#666">2025-12-12</span>
-            </div>
-          </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multa DCTF Mensal com vencimento em 09/01/2026 e prazo de regularização até 24/12/2025, risco de multa vencida se não paga.</div>
-        </div>
-        <div style="padding:12px;background:#ef444408;border-radius:10px;border-left:3px solid #ef4444;margin-bottom:8px">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div style="font-size:14px;font-weight:600;color:#f87171">DGA</div>
-            <div style="display:flex;gap:8px;align-items:center">
-              
-              <span style="font-size:11px;color:#666">2025-12-10</span>
-            </div>
-          </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">DCTFWeb</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Omissão do código IOF sobre mútuos na DCTF Mensal gerou intimação com prazo de regularização até 27/12/2025.</div>
-        </div>
-        <div style="padding:12px;background:#ef444408;border-radius:10px;border-left:3px solid #ef4444;margin-bottom:8px">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div style="font-size:14px;font-weight:600;color:#f87171">Ricardo Saretti</div>
-            <div style="display:flex;gap:8px;align-items:center">
-              <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 12.250,00</span>
-              <span style="font-size:11px;color:#666">2025-11-28</span>
-            </div>
-          </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Omissão de declarações DEFIS, PGDAS, DCTF Web, SPED Contribuições e SPED Fiscal com multas estimadas em R$ 12.250,00.</div>
-        </div>
-        <div style="padding:12px;background:#ef444408;border-radius:10px;border-left:3px solid #ef4444;margin-bottom:8px">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div style="font-size:14px;font-weight:600;color:#f87171">Ricardo Saretti</div>
-            <div style="display:flex;gap:8px;align-items:center">
-              <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 12.250,00</span>
-              <span style="font-size:11px;color:#666">2025-11-28</span>
-            </div>
-          </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Omissão de declarações DEFIS, PGDAS, DCTF Web, SPED Contribuições e SPED Fiscal com multas estimadas em R$ 12.250,00.</div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Protesto</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Diferença entre o vencimento informado no pedido de compra e o vencimento da nota fiscal pode levar a protesto devido a vencimentos antecipados e erros no sistema de cálculo de datas.</div>
         </div>
     </div>
     <div class="card">
-      <div class="card-title">🟡 Média Prioridade — 97 riscos</div>
+      <div class="card-title">🟡 Média Prioridade — 96 riscos</div>
         <div style="padding:12px;background:#f59e0b08;border-radius:10px;border-left:3px solid #f59e0b;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
             <div style="font-size:14px;font-weight:600;color:#fbbf24">VALENTINO</div>
@@ -635,62 +657,51 @@ const sections = {
             </div>
           </div>
           <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">IRRF</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">IRRF em aberto não declarado no eSocial devido a erro na data de pagamento das férias, gerando pendência fiscal.</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Erro de digitação no relatório de imposto de renda que não trouxe o valor do IRRF, indicando possível falha na conferência e risco de imposto não recolhido corretamente.</div>
         </div>
         <div style="padding:12px;background:#f59e0b08;border-radius:10px;border-left:3px solid #f59e0b;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div style="font-size:14px;font-weight:600;color:#fbbf24">VALENTINO</div>
+            <div style="font-size:14px;font-weight:600;color:#fbbf24">Valentino</div>
             <div style="display:flex;gap:8px;align-items:center">
               <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 1.109,22</span>
               <span style="font-size:11px;color:#666">2026-03-25</span>
             </div>
           </div>
           <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">IRRF</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">IRRF não declarado no eSocial devido a erro na data de pagamento das férias, gerando pendência e multa de R$ 221,84 e juros de R$ 48,58.</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">IRRF em aberto devido a erro na data de pagamento das férias, necessitando retificação do eSocial e pagamento de multa e juros.</div>
         </div>
         <div style="padding:12px;background:#f59e0b08;border-radius:10px;border-left:3px solid #f59e0b;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div style="font-size:14px;font-weight:600;color:#fbbf24">VALENTINO</div>
+            <div style="font-size:14px;font-weight:600;color:#fbbf24">Valentino</div>
             <div style="display:flex;gap:8px;align-items:center">
               <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 1.109,22</span>
               <span style="font-size:11px;color:#666">2026-03-25</span>
             </div>
           </div>
           <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">IRRF</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">IRRF não declarado no eSocial devido a erro na data de pagamento das férias, gerando multa e juros a serem pagos.</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">IRRF não declarado para a Receita Federal devido a erro na data de pagamento das férias, gerando pendência que requer retificação do eSocial e pagamento de multa e juros.</div>
         </div>
         <div style="padding:12px;background:#f59e0b08;border-radius:10px;border-left:3px solid #f59e0b;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div style="font-size:14px;font-weight:600;color:#fbbf24">DGA</div>
+            <div style="font-size:14px;font-weight:600;color:#fbbf24">Veedha</div>
             <div style="display:flex;gap:8px;align-items:center">
-              <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 3.231,52</span>
+              <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 3.628,68</span>
               <span style="font-size:11px;color:#666">2026-03-23</span>
             </div>
           </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Discussão sobre reembolso de multa e juros totalizando R$ 3.628,68, indicando risco financeiro e operacional.</div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa e Juros</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Existem valores de multa e juros totalizando R$ 3.628,68 que precisam ser analisados para reembolso ao cliente.</div>
         </div>
         <div style="padding:12px;background:#f59e0b08;border-radius:10px;border-left:3px solid #f59e0b;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
             <div style="font-size:14px;font-weight:600;color:#fbbf24">HEC Participações</div>
             <div style="display:flex;gap:8px;align-items:center">
-              <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 4.037,50</span>
+              <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 4.037,50 (notas), R$ 187,77 (CSR), R$ 60,56 (IRRF)</span>
               <span style="font-size:11px;color:#666">2026-03-16</span>
             </div>
           </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Retenções</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Notas fiscais com retenções não declaradas em 11/2025 e 12/2025, gerando necessidade de retificação e recolhimento com multa e juros.</div>
-        </div>
-        <div style="padding:12px;background:#f59e0b08;border-radius:10px;border-left:3px solid #f59e0b;margin-bottom:8px">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div style="font-size:14px;font-weight:600;color:#fbbf24">DGA</div>
-            <div style="display:flex;gap:8px;align-items:center">
-              
-              <span style="font-size:11px;color:#666">2026-03-11</span>
-            </div>
-          </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Simples Nacional</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Ultrapassagem de limite do Simples Nacional no Grupo PERIM pode gerar exclusão e impacto financeiro.</div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">retenções não declaradas (CSR, IRRF)</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Notas fiscais emitidas com retenções não declaradas nas competências 11/2025 e 12/2025, exigindo retificação e recolhimento de tributos com multa e juros.</div>
         </div>
         <div style="padding:12px;background:#f59e0b08;border-radius:10px;border-left:3px solid #f59e0b;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -700,8 +711,8 @@ const sections = {
               <span style="font-size:11px;color:#666">2026-03-11</span>
             </div>
           </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Retenções</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Notas fiscais com retenções não declaradas em 11/2025 e 12/2025, exigindo retificação e recolhimento de tributos com multa e juros.</div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">IRRF e CSR retidos não declarados</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Notas fiscais emitidas com retenções de IRRF e CSR não declaradas nas competências 11/2025 e 12/2025, exigindo retificação e recolhimento com multa e juros.</div>
         </div>
         <div style="padding:12px;background:#f59e0b08;border-radius:10px;border-left:3px solid #f59e0b;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -711,8 +722,8 @@ const sections = {
               <span style="font-size:11px;color:#666">2026-03-09</span>
             </div>
           </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">ICMS/IPI</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Retificações na EFD ICMS/IPI devido a crédito indevido e cálculo do DIFAL pendentes de análise.</div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">EFD ICMS/IPI, DIFAL</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Necessidade de retificações na EFD ICMS/IPI devido a crédito indevido e cálculo do DIFAL, indicando possível risco fiscal.</div>
         </div>
         <div style="padding:12px;background:#f59e0b08;border-radius:10px;border-left:3px solid #f59e0b;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -722,8 +733,8 @@ const sections = {
               <span style="font-size:11px;color:#666">2026-03-09</span>
             </div>
           </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">DCTFWeb</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Retificações EFD ICMS/IPI indicam crédito indevido e DIFAL não recolhido desde maio/2024, gerando risco fiscal e necessidade de correção.</div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">EFD ICMS/IPI, DIFAL</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Identificada necessidade de retificações na EFD ICMS/IPI por crédito indevido e cálculo do DIFAL para o ano de 2025.</div>
         </div>
         <div style="padding:12px;background:#f59e0b08;border-radius:10px;border-left:3px solid #f59e0b;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -733,19 +744,8 @@ const sections = {
               <span style="font-size:11px;color:#666">2026-03-04</span>
             </div>
           </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Outro</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Reembolso de valor provisionado de R$ 835,35 devido a descontos indevidos na folha, risco operacional de controle financeiro.</div>
-        </div>
-        <div style="padding:12px;background:#f59e0b08;border-radius:10px;border-left:3px solid #f59e0b;margin-bottom:8px">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div style="font-size:14px;font-weight:600;color:#fbbf24">CHOPERIA DIAS LTDA</div>
-            <div style="display:flex;gap:8px;align-items:center">
-              <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 835,35</span>
-              <span style="font-size:11px;color:#666">2026-03-04</span>
-            </div>
-          </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Outro</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Reembolso de descontos indevidos na folha de pagamento, valor de R$ 835,35 a ser provisionado para 13/03.</div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Descontos indevidos</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Há um valor provisionado para reembolso referente a descontos indevidos na folha de pagamento, indicando possível necessidade de ajuste financeiro.</div>
         </div>
         <div style="padding:12px;background:#f59e0b08;border-radius:10px;border-left:3px solid #f59e0b;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -755,30 +755,30 @@ const sections = {
               <span style="font-size:11px;color:#666">2026-03-03</span>
             </div>
           </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Outro</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Reembolso de valor indevido na folha de pagamento devido a inclusão manual de provento após fechamento, gerando desconto maior.</div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Reembolso</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Solicitação de reembolso de valor referente a descontos indevidos na folha de pagamento.</div>
         </div>
         <div style="padding:12px;background:#f59e0b08;border-radius:10px;border-left:3px solid #f59e0b;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div style="font-size:14px;font-weight:600;color:#fbbf24">Grupo Espaço Campolim</div>
+            <div style="font-size:14px;font-weight:600;color:#fbbf24">Choperia (Grupo Espaço Campolim)</div>
             <div style="display:flex;gap:8px;align-items:center">
               
               <span style="font-size:11px;color:#666">2026-03-03</span>
             </div>
           </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Outro</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Descontos indevidos na folha de pagamento causaram reembolso ao cliente e custo repassado à DGA, indicando falha operacional no processo.</div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Descontos indevidos na folha de pagamento</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Descontos indevidos de VT e empréstimo foram lançados e posteriormente estornados, gerando reembolso e custo repassado ao cliente, além de falta de retorno adequado ao questionamento.</div>
         </div>
         <div style="padding:12px;background:#f59e0b08;border-radius:10px;border-left:3px solid #f59e0b;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div style="font-size:14px;font-weight:600;color:#fbbf24">Grupo Espaço Campolim</div>
+            <div style="font-size:14px;font-weight:600;color:#fbbf24">Choperia (Grupo Espaço Campolim)</div>
             <div style="display:flex;gap:8px;align-items:center">
               
               <span style="font-size:11px;color:#666">2026-03-02</span>
             </div>
           </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Outro</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Descontos indevidos na folha de pagamento causaram reembolso ao cliente e custo repassado à DGA, gerando risco operacional e financeiro.</div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Descontos indevidos na folha de pagamento</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Descontos indevidos de VT e empréstimo foram aplicados e posteriormente estornados, gerando custo para a DGA e desgaste com o cliente, sem devolução dos valores pagos indevidamente aos colaboradores.</div>
         </div>
         <div style="padding:12px;background:#f59e0b08;border-radius:10px;border-left:3px solid #f59e0b;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -788,19 +788,8 @@ const sections = {
               <span style="font-size:11px;color:#666">2026-02-25</span>
             </div>
           </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Outro</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Documentos de saída não escriturados nas competências 06/2025 e 08/2025, exigindo retificações na EFD ICMS/IPI para regularização dos saldos.</div>
-        </div>
-        <div style="padding:12px;background:#f59e0b08;border-radius:10px;border-left:3px solid #f59e0b;margin-bottom:8px">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div style="font-size:14px;font-weight:600;color:#fbbf24">Veedha</div>
-            <div style="display:flex;gap:8px;align-items:center">
-              <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 3.231,52</span>
-              <span style="font-size:11px;color:#666">2026-02-24</span>
-            </div>
-          </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multas e juros por falha na escrituração de NF em outubro/2025, com responsabilidade compartilhada entre DGA e cliente.</div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">EFD ICMS/IPI</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Documentos de saída não escriturados nas competências 06/2025 e 08/2025, necessitando retificações na EFD ICMS/IPI para regularização dos saldos.</div>
         </div>
         <div style="padding:12px;background:#f59e0b08;border-radius:10px;border-left:3px solid #f59e0b;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -810,8 +799,8 @@ const sections = {
               <span style="font-size:11px;color:#666">2026-02-24</span>
             </div>
           </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multas e juros por retenções não declaradas na REINF em 08/2025 e 09/2025, totalizando R$ 933,91, com multa assumida parcialmente pela DGA.</div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa e Juros REINF</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multas e juros foram gerados automaticamente após transmissão retificada da REINF devido a falha humana na conferência das retenções, totalizando R$ 933,91.</div>
         </div>
         <div style="padding:12px;background:#f59e0b08;border-radius:10px;border-left:3px solid #f59e0b;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -821,19 +810,41 @@ const sections = {
               <span style="font-size:11px;color:#666">2026-02-23</span>
             </div>
           </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multas e juros gerados por retenções não declaradas na REINF dos meses 08/2025 e 09/2025, com multa assumida parcialmente pela DGA.</div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa e Juros REINF</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multas e juros foram gerados por retenções não declaradas nas notas fiscais 694 e 738 dos meses 08/2025 e 09/2025, devido a falha humana e transmissão da REINF retificada.</div>
         </div>
         <div style="padding:12px;background:#f59e0b08;border-radius:10px;border-left:3px solid #f59e0b;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
             <div style="font-size:14px;font-weight:600;color:#fbbf24">Veedha</div>
             <div style="display:flex;gap:8px;align-items:center">
-              <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 3.231,52</span>
+              <span style="color:#f59e0b;font-size:12px;font-weight:600">Multa CSRF: R$ 2.443,35, Juros CSRF: R$ 263,88, Multa IRRF: R$ 788,17, Juros IRRF: R$ 133,28</span>
               <span style="font-size:11px;color:#666">2026-02-20</span>
             </div>
           </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Falha na escrituração de NF impactou REINF, gerando multas e juros de CSRF e IRRF, com valores totais de multa somando R$ 3.231,52.</div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa e Juros - CSRF e IRRF</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Falha na escrituração de nota fiscal de outubro/2025 e novembro/2025 impactou a REINF, gerando multas e juros por CSRF e IRRF retidos, com responsabilidade compartilhada entre cliente e DGA.</div>
+        </div>
+        <div style="padding:12px;background:#f59e0b08;border-radius:10px;border-left:3px solid #f59e0b;margin-bottom:8px">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start">
+            <div style="font-size:14px;font-weight:600;color:#fbbf24">DGA CONTABILIDADE</div>
+            <div style="display:flex;gap:8px;align-items:center">
+              
+              <span style="font-size:11px;color:#666">2026-02-17</span>
+            </div>
+          </div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Intimação Fiscal</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Recebimento de termo de intimação no Ecac, indicando possível pendência fiscal que requer atenção imediata.</div>
+        </div>
+        <div style="padding:12px;background:#f59e0b08;border-radius:10px;border-left:3px solid #f59e0b;margin-bottom:8px">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start">
+            <div style="font-size:14px;font-weight:600;color:#fbbf24">MR SERVICE</div>
+            <div style="display:flex;gap:8px;align-items:center">
+              
+              <span style="font-size:11px;color:#666">2026-02-17</span>
+            </div>
+          </div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Impostos não recolhidos</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Cliente possui histórico de não pagar impostos em dia e foi identificado ausência de recolhimento dos mesmos, necessitando regularização.</div>
         </div>
         <div style="padding:12px;background:#f59e0b08;border-radius:10px;border-left:3px solid #f59e0b;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -844,40 +855,18 @@ const sections = {
             </div>
           </div>
           <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">PIS/COFINS</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Não houve apuração de PIS e COFINS na competência 03/2025, podendo gerar autuações e cobrança de juros.</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Na competência 03/2025, os serviços prestados não foram considerados para apuração dos impostos PIS e COFINS, resultando em não apuração desses tributos.</div>
         </div>
         <div style="padding:12px;background:#f59e0b08;border-radius:10px;border-left:3px solid #f59e0b;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div style="font-size:14px;font-weight:600;color:#fbbf24">VEEDHA PARTICIPAÇÕES, RAIZES DO CAMPO, SK NF FRANCHISING</div>
+            <div style="font-size:14px;font-weight:600;color:#fbbf24">VEEDHA PARTICIPAÇÕES, RAIZES DO CAMPO COMERCIO, SK NF FRANCHISING</div>
             <div style="display:flex;gap:8px;align-items:center">
               
               <span style="font-size:11px;color:#666">2026-02-13</span>
             </div>
           </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multas por não entrega de documentação na Prefeitura de SP com guias vencendo em 19/02 para três clientes.</div>
-        </div>
-        <div style="padding:12px;background:#f59e0b08;border-radius:10px;border-left:3px solid #f59e0b;margin-bottom:8px">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div style="font-size:14px;font-weight:600;color:#fbbf24">DGA</div>
-            <div style="display:flex;gap:8px;align-items:center">
-              
-              <span style="font-size:11px;color:#666">2026-02-08</span>
-            </div>
-          </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multas por falha no fluxo de retenções não encaminhadas, indicando risco operacional na conformidade do processo.</div>
-        </div>
-        <div style="padding:12px;background:#f59e0b08;border-radius:10px;border-left:3px solid #f59e0b;margin-bottom:8px">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div style="font-size:14px;font-weight:600;color:#fbbf24">DGA</div>
-            <div style="display:flex;gap:8px;align-items:center">
-              
-              <span style="font-size:11px;color:#666">2026-02-08</span>
-            </div>
-          </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Retenções</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Retenções não encaminhadas corretamente devido a falhas no fluxo operacional e cadastro de empresas, podendo gerar inconsistências fiscais.</div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa por não entrega de documentação</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multa por não entrega de documentação na Prefeitura de SP com guias a vencer em 19/02, pendente pagamento para VEEDHA PARTICIPAÇÕES e RAIZES DO CAMPO.</div>
         </div>
         <div style="padding:12px;background:#f59e0b08;border-radius:10px;border-left:3px solid #f59e0b;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -888,18 +877,18 @@ const sections = {
             </div>
           </div>
           <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">PIS/COFINS</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Receita de aluguel não considerada na apuração de PIS e COFINS, gerando tributos complementares a recolher.</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Receita de aluguel não considerada na apuração de PIS e COFINS, gerando valores complementares a recolher de R$ 660,76 (PIS) e R$ 3.049,67 (COFINS).</div>
         </div>
         <div style="padding:12px;background:#f59e0b08;border-radius:10px;border-left:3px solid #f59e0b;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div style="font-size:14px;font-weight:600;color:#fbbf24">MR Service</div>
+            <div style="font-size:14px;font-weight:600;color:#fbbf24">ENRX</div>
             <div style="display:flex;gap:8px;align-items:center">
               
-              <span style="font-size:11px;color:#666">2026-02-04</span>
+              <span style="font-size:11px;color:#666">2026-02-02</span>
             </div>
           </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">PIS/COFINS</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Não houve apuração de PIS e COFINS na competência 03/2025, gerando risco fiscal e possível cobrança de juros.</div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">ISS - RPA</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Solicitação de recolhimento de ISS para RPA das competências 10/2025 e 11/2025 ainda pendente, com lembrete recorrente para o time de DP.</div>
         </div>
         <div style="padding:12px;background:#f59e0b08;border-radius:10px;border-left:3px solid #f59e0b;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -910,7 +899,7 @@ const sections = {
             </div>
           </div>
           <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">ICMS</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Crédito de ICMS indevido considerado em operações de empresa prestadora de serviços, corrigido no sistema para evitar autuações.</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Crédito de ICMS indevidamente considerado em operações de empresa prestadora de serviços, corrigido após identificação.</div>
         </div>
         <div style="padding:12px;background:#f59e0b08;border-radius:10px;border-left:3px solid #f59e0b;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -921,7 +910,18 @@ const sections = {
             </div>
           </div>
           <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">ICMS</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Crédito de ICMS indevidamente considerado em operações de prestadora de serviços, corrigido no sistema para evitar futuras inconsistências.</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Crédito de ICMS indevidamente aproveitado por empresa prestadora de serviços, correções já realizadas no sistema.</div>
+        </div>
+        <div style="padding:12px;background:#f59e0b08;border-radius:10px;border-left:3px solid #f59e0b;margin-bottom:8px">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start">
+            <div style="font-size:14px;font-weight:600;color:#fbbf24">ENRX</div>
+            <div style="display:flex;gap:8px;align-items:center">
+              
+              <span style="font-size:11px;color:#666">2026-02-02</span>
+            </div>
+          </div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">ISS</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Recolhimento de ISS referente a RPA das competências 10/2025 e 11/2025 está pendente e requer plano de ação.</div>
         </div>
         <div style="padding:12px;background:#f59e0b08;border-radius:10px;border-left:3px solid #f59e0b;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -931,8 +931,8 @@ const sections = {
               <span style="font-size:11px;color:#666">2026-02-02</span>
             </div>
           </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">EFD ICMS/IPI</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Retificações necessárias em ao menos 6 períodos de 2025 por transporte indevido de saldo credor de ICMS, com taxa anual de retificação pendente.</div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">EFD ICMS/IPI - Retificação</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Necessidade de retificação de no mínimo 6 períodos da EFD ICMS/IPI de 2025 devido ao transporte indevido de saldo credor de ICMS, com impedimento atual pela falta de pagamento da taxa do posto fiscal.</div>
         </div>
         <div style="padding:12px;background:#f59e0b08;border-radius:10px;border-left:3px solid #f59e0b;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -942,8 +942,19 @@ const sections = {
               <span style="font-size:11px;color:#666">2026-02-02</span>
             </div>
           </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">ICMS</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Necessidade de retificação de 6 períodos da EFD ICMS/IPI por lançamento indevido de crédito de ICMS, com taxa anual de retificação pendente.</div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">EFD ICMS/IPI - Retificação</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Necessidade de retificação de pelo menos 6 períodos da EFD ICMS/IPI de 2025 devido ao indevido aproveitamento e transporte de crédito de ICMS, com pendência no pagamento da taxa do posto fiscal que impede a retificação.</div>
+        </div>
+        <div style="padding:12px;background:#f59e0b08;border-radius:10px;border-left:3px solid #f59e0b;margin-bottom:8px">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start">
+            <div style="font-size:14px;font-weight:600;color:#fbbf24">ENRX</div>
+            <div style="display:flex;gap:8px;align-items:center">
+              <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 228,23</span>
+              <span style="font-size:11px;color:#666">2026-02-02</span>
+            </div>
+          </div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">ISS</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Ausência de recolhimento do ISS referente a RPA dos meses 10/2025 e 11/2025, com multa e juros acumulados, sem geração de guia atualizada e escrituração das RPAs.</div>
         </div>
         <div style="padding:12px;background:#f59e0b08;border-radius:10px;border-left:3px solid #f59e0b;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -954,22 +965,33 @@ const sections = {
             </div>
           </div>
           <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">FGTS</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Divergência na guia de FGTS consignado do mês 11-2025, requer análise e reunião para resolução.</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Divergência na guia do FGTS consignado do mês 11-2025, indicando possível inconsistência no recolhimento ou declaração.</div>
         </div>
-      <div style="font-size:12px;color:#666;margin-top:8px;text-align:center">Exibindo 30 mais recentes de 97 riscos de média prioridade</div>
+        <div style="padding:12px;background:#f59e0b08;border-radius:10px;border-left:3px solid #f59e0b;margin-bottom:8px">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start">
+            <div style="font-size:14px;font-weight:600;color:#fbbf24">MMB</div>
+            <div style="display:flex;gap:8px;align-items:center">
+              
+              <span style="font-size:11px;color:#666">2026-02-02</span>
+            </div>
+          </div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">FGTS</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Divergência na guia do FGTS consignado do mês 11-2025 que pode indicar pendência ou erro no recolhimento.</div>
+        </div>
+      <div style="font-size:12px;color:#666;margin-top:8px;text-align:center">Exibindo 30 mais recentes de 96 riscos de média prioridade</div>
     </div>
     <div class="card">
-      <div class="card-title">🟢 Baixa Prioridade — 28 riscos</div>
+      <div class="card-title">🟢 Baixa Prioridade — 19 riscos</div>
         <div style="padding:12px;background:#10b98108;border-radius:10px;border-left:3px solid #10b981;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
             <div style="font-size:14px;font-weight:600;color:#34d399">Hi-lex</div>
             <div style="display:flex;gap:8px;align-items:center">
-              <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 219,66 multa + R$ 21,96 juros</span>
+              <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 219,66</span>
               <span style="font-size:11px;color:#666">2026-03-24</span>
             </div>
           </div>
           <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">IRRF</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multa e juros por atraso no envio do IRRF retido sobre aluguel competência 12/2025, regularizado após prazo.</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multa de R$ 219,66 e juros de R$ 21,96 gerados por atraso no envio do IRRF retido do aluguel competência 12/2025, já regularizado com o cliente.</div>
         </div>
         <div style="padding:12px;background:#10b98108;border-radius:10px;border-left:3px solid #10b981;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -979,41 +1001,19 @@ const sections = {
               <span style="font-size:11px;color:#666">2026-03-16</span>
             </div>
           </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Guia da Taxa de Serviço gerada com multa e juros devido à duplicidade de Inscrição Estadual vinculada a dois CNPJs.</div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa e Juros</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Guia da Taxa de Serviço Anual gerada com acréscimos legais devido à duplicidade de Inscrição Estadual vinculada a dois CNPJs, resultando em multa e juros.</div>
         </div>
         <div style="padding:12px;background:#10b98108;border-radius:10px;border-left:3px solid #10b981;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
             <div style="font-size:14px;font-weight:600;color:#34d399">Sany</div>
             <div style="display:flex;gap:8px;align-items:center">
-              <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 76,08</span>
+              <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 76,08 multa e R$ 23,05 juros</span>
               <span style="font-size:11px;color:#666">2026-03-11</span>
             </div>
           </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multa e juros gerados por emissão incorreta da guia da Taxa de Serviço devido à duplicidade de Inscrição Estadual vinculada a dois CNPJs.</div>
-        </div>
-        <div style="padding:12px;background:#10b98108;border-radius:10px;border-left:3px solid #10b981;margin-bottom:8px">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div style="font-size:14px;font-weight:600;color:#34d399">DGA CONTABILIDADE</div>
-            <div style="display:flex;gap:8px;align-items:center">
-              
-              <span style="font-size:11px;color:#666">2026-02-17</span>
-            </div>
-          </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Outro</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Recebimento de termo de intimação no Ecac, indicando possível pendência fiscal a ser analisada.</div>
-        </div>
-        <div style="padding:12px;background:#10b98108;border-radius:10px;border-left:3px solid #10b981;margin-bottom:8px">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div style="font-size:14px;font-weight:600;color:#34d399">DGA</div>
-            <div style="display:flex;gap:8px;align-items:center">
-              <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 70,00</span>
-              <span style="font-size:11px;color:#666">2026-02-07</span>
-            </div>
-          </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Retenções</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Falha de cadastro impediu envio das guias de retenções, gerando juros de R$ 70,00 que a DGA pretende absorver para evitar impacto no cliente.</div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa e Juros</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multa e juros gerados devido à emissão incorreta da guia da Taxa de Serviço Anual por duplicidade na Inscrição Estadual vinculada a dois CNPJs.</div>
         </div>
         <div style="padding:12px;background:#10b98108;border-radius:10px;border-left:3px solid #10b981;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -1023,85 +1023,52 @@ const sections = {
               <span style="font-size:11px;color:#666">2026-02-07</span>
             </div>
           </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Retenções</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Falha no cadastro causou atraso no envio das guias de retenções, gerando juros de R$ 70,00 que a DGA absorverá para evitar impacto no cliente.</div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Retenções não encaminhadas</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Falha de cadastro resultou em não encaminhamento das guias de retenções, gerando juros de aproximadamente R$ 50,00 para Asset1 Crédito e R$ 20,00 para Curado Bar.</div>
+        </div>
+        <div style="padding:12px;background:#10b98108;border-radius:10px;border-left:3px solid #10b981;margin-bottom:8px">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start">
+            <div style="font-size:14px;font-weight:600;color:#34d399">Asset1 Crédito</div>
+            <div style="display:flex;gap:8px;align-items:center">
+              <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 50,00</span>
+              <span style="font-size:11px;color:#666">2026-02-07</span>
+            </div>
+          </div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Juros por retenções não encaminhadas</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Juros de aproximadamente R$ 50,00 devido a retenções não encaminhadas no prazo por falha de cadastro.</div>
         </div>
         <div style="padding:12px;background:#10b98108;border-radius:10px;border-left:3px solid #10b981;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
             <div style="font-size:14px;font-weight:600;color:#34d399">ENRX</div>
             <div style="display:flex;gap:8px;align-items:center">
-              
+              <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 228,23</span>
               <span style="font-size:11px;color:#666">2026-02-02</span>
             </div>
           </div>
           <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">ISS</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Solicitação de recolhimento de ISS via RPA para competências 10/2025 e 11/2025 ainda sem plano de ação definido.</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Ausência de recolhimento do ISS referente a RPA dos meses 10/2025 e 11/2025, com multas e juros calculados, sem geração de guia atualizada ou escrituração.</div>
         </div>
         <div style="padding:12px;background:#10b98108;border-radius:10px;border-left:3px solid #10b981;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div style="font-size:14px;font-weight:600;color:#34d399">ENRX</div>
-            <div style="display:flex;gap:8px;align-items:center">
-              <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 131,75</span>
-              <span style="font-size:11px;color:#666">2026-02-02</span>
-            </div>
-          </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Ausência de recolhimento do ISS para RPA nos meses 10/2025 e 11/2025 devido à perda do documento após demissão.</div>
-        </div>
-        <div style="padding:12px;background:#10b98108;border-radius:10px;border-left:3px solid #10b981;margin-bottom:8px">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div style="font-size:14px;font-weight:600;color:#34d399">ENRX</div>
-            <div style="display:flex;gap:8px;align-items:center">
-              <span style="color:#f59e0b;font-size:12px;font-weight:600">Multa: R$ 23,95 | Juros: R$ 5,16 | ISS: R$ 202,23</span>
-              <span style="font-size:11px;color:#666">2026-02-02</span>
-            </div>
-          </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Ausência de recolhimento do ISS em RPAs dos meses 10/2025 e 11/2025, gerando multas e juros a serem pagos.</div>
-        </div>
-        <div style="padding:12px;background:#10b98108;border-radius:10px;border-left:3px solid #10b981;margin-bottom:8px">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div style="font-size:14px;font-weight:600;color:#34d399">ENRX</div>
-            <div style="display:flex;gap:8px;align-items:center">
-              <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 33,51</span>
-              <span style="font-size:11px;color:#666">2026-02-02</span>
-            </div>
-          </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Ausência de recolhimento do ISS em RPAs dos meses 10/2025 e 11/2025, gerando multa e juros não pagos.</div>
-        </div>
-        <div style="padding:12px;background:#10b98108;border-radius:10px;border-left:3px solid #10b981;margin-bottom:8px">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div style="font-size:14px;font-weight:600;color:#34d399">MMB</div>
+            <div style="font-size:14px;font-weight:600;color:#34d399">RICARDO SARETTI e SELOSERV</div>
             <div style="display:flex;gap:8px;align-items:center">
               
-              <span style="font-size:11px;color:#666">2026-02-02</span>
+              <span style="font-size:11px;color:#666">2026-01-30</span>
             </div>
           </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Outro</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Divergência na guia FGTS consignado do mês 11-2025, reunião agendada para tratar do tema.</div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa MAED DCTFWeb</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multa relacionada à MAED DCTFWeb mencionada, porém obrigação já transmitida e sem pendências em aberto.</div>
         </div>
         <div style="padding:12px;background:#10b98108;border-radius:10px;border-left:3px solid #10b981;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div style="font-size:14px;font-weight:600;color:#34d399">DGA</div>
+            <div style="font-size:14px;font-weight:600;color:#34d399">SANY</div>
             <div style="display:flex;gap:8px;align-items:center">
               <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 4,13</span>
               <span style="font-size:11px;color:#666">2026-01-29</span>
             </div>
           </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multa e juros por pagamento de imposto de MG com atraso de um dia, valor de R$ 4,13.</div>
-        </div>
-        <div style="padding:12px;background:#10b98108;border-radius:10px;border-left:3px solid #10b981;margin-bottom:8px">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div style="font-size:14px;font-weight:600;color:#34d399">MMB</div>
-            <div style="display:flex;gap:8px;align-items:center">
-              <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 1.878</span>
-              <span style="font-size:11px;color:#666">2026-01-29</span>
-            </div>
-          </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">FGTS</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Divergência na guia FGTS consignado mês 11-2025, com valor principal de R$ 1.878 pendente de confirmação junto a ex-colaboradores.</div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa e Juros</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multa e juros por atraso de um dia no pagamento do imposto de MG, vencimento em 08/01 e pagamento em 09/01.</div>
         </div>
         <div style="padding:12px;background:#10b98108;border-radius:10px;border-left:3px solid #10b981;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -1112,7 +1079,7 @@ const sections = {
             </div>
           </div>
           <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multa e juros de R$ 4,13 por pagamento do imposto Difal MG com um dia de atraso, gerando solicitação de reembolso.</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multa e juros por pagamento de imposto de MG com atraso de um dia em relação ao vencimento.</div>
         </div>
         <div style="padding:12px;background:#10b98108;border-radius:10px;border-left:3px solid #10b981;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -1123,7 +1090,7 @@ const sections = {
             </div>
           </div>
           <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multa de R$ 4,13 por divergência na data de pagamento do imposto Difal Uso e Consumo MG, com solicitação de reembolso devido a erro do time DGA.</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multa de R$ 4,13 gerada por divergência na data de pagamento do imposto Difal Uso e Consumo de MG para a Filial 010.</div>
         </div>
         <div style="padding:12px;background:#10b98108;border-radius:10px;border-left:3px solid #10b981;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -1134,29 +1101,18 @@ const sections = {
             </div>
           </div>
           <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multa de R$ 4,13 por divergência na data de pagamento do Difal Uso e Consumo MG, com solicitação de reembolso ao time DGA.</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multa de R$ 4,13 gerada por divergência na data de pagamento do imposto Difal Uso e Consumo de MG para a Filial 010.</div>
         </div>
         <div style="padding:12px;background:#10b98108;border-radius:10px;border-left:3px solid #10b981;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div style="font-size:14px;font-weight:600;color:#34d399">Grupo SMZTO</div>
+            <div style="font-size:14px;font-weight:600;color:#34d399">SMZTO INVESTIMENTOS</div>
             <div style="display:flex;gap:8px;align-items:center">
               <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 27,09</span>
               <span style="font-size:11px;color:#666">2026-01-23</span>
             </div>
           </div>
           <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multa de R$ 27,09 relacionada a PIS e COFINS em aberto, com solicitação de confirmação de reembolso.</div>
-        </div>
-        <div style="padding:12px;background:#10b98108;border-radius:10px;border-left:3px solid #10b981;margin-bottom:8px">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div style="font-size:14px;font-weight:600;color:#34d399">Grupo SMZTO</div>
-            <div style="display:flex;gap:8px;align-items:center">
-              <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 27,09</span>
-              <span style="font-size:11px;color:#666">2026-01-23</span>
-            </div>
-          </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multa de R$ 27,09 relacionada a PIS e COFINS em aberto, com reembolso pendente.</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multa referente a PIS e COFINS em aberto no valor de R$ 27,09, com reembolso pendente.</div>
         </div>
         <div style="padding:12px;background:#10b98108;border-radius:10px;border-left:3px solid #10b981;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -1167,40 +1123,29 @@ const sections = {
             </div>
           </div>
           <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multa de R$ 27,09 relacionada a PIS e COFINS em aberto, aguardando confirmação de reembolso.</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multa de R$ 27,09 relacionada a PIS e COFINS em aberto, valor baixo e pendência de reembolso.</div>
         </div>
         <div style="padding:12px;background:#10b98108;border-radius:10px;border-left:3px solid #10b981;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
             <div style="font-size:14px;font-weight:600;color:#34d399">SMZTO Investimentos</div>
-            <div style="display:flex;gap:8px;align-items:center">
-              <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 32,56</span>
-              <span style="font-size:11px;color:#666">2026-01-22</span>
-            </div>
-          </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Atraso no envio da guia de PIS e COFINS com cobrança de juros e multa totalizando R$ 32,56.</div>
-        </div>
-        <div style="padding:12px;background:#10b98108;border-radius:10px;border-left:3px solid #10b981;margin-bottom:8px">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div style="font-size:14px;font-weight:600;color:#34d399">Grupo SMZTO</div>
             <div style="display:flex;gap:8px;align-items:center">
               <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 32,56</span>
               <span style="font-size:11px;color:#666">2026-01-22</span>
             </div>
           </div>
           <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">PIS/COFINS</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Atraso no envio da guia de PIS e COFINS com incidência de juros e multa, totalizando R$ 32,56.</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">A guia de PIS e COFINS foi enviada com atraso, gerando juros de R$ 27,09 e multa de R$ 5,47.</div>
         </div>
         <div style="padding:12px;background:#10b98108;border-radius:10px;border-left:3px solid #10b981;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
             <div style="font-size:14px;font-weight:600;color:#34d399">SMZTO Investimentos</div>
             <div style="display:flex;gap:8px;align-items:center">
-              <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 32,56</span>
+              <span style="color:#f59e0b;font-size:12px;font-weight:600">Juros: R$ 27,09, Multa: R$ 5,47</span>
               <span style="font-size:11px;color:#666">2026-01-13</span>
             </div>
           </div>
           <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">PIS/COFINS</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Atraso no envio da guia de PIS/COFINS com incidência de juros e multa totalizando R$ 32,56.</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Guia de PIS e COFINS enviada com atraso, gerando juros e multa de pequeno valor.</div>
         </div>
         <div style="padding:12px;background:#10b98108;border-radius:10px;border-left:3px solid #10b981;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -1210,8 +1155,8 @@ const sections = {
               <span style="font-size:11px;color:#666">2026-01-08</span>
             </div>
           </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">DCTFWeb</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">MAED em aberto por DCTFWeb transmitida fora do prazo em abril/2025, com guia gerada mas período não encerrado.</div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multa por DCTFWeb transmitida fora do prazo referente a abril de 2025.</div>
         </div>
         <div style="padding:12px;background:#10b98108;border-radius:10px;border-left:3px solid #10b981;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -1222,18 +1167,7 @@ const sections = {
             </div>
           </div>
           <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multas por não transmissão da DCTFWeb (R$ 250) e atraso no pagamento da guia INSS (R$ 158) devido a falha no processo e parametrização.</div>
-        </div>
-        <div style="padding:12px;background:#10b98108;border-radius:10px;border-left:3px solid #10b981;margin-bottom:8px">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div style="font-size:14px;font-weight:600;color:#34d399">FLS</div>
-            <div style="display:flex;gap:8px;align-items:center">
-              <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 408,00</span>
-              <span style="font-size:11px;color:#666">2025-12-22</span>
-            </div>
-          </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multas por não transmissão da DCTFWeb (R$ 250,00) e atraso no pagamento da guia INSS (R$ 158,00), risco operacional por falha no processo.</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multas aplicadas por não transmissão da DCTFWeb (R$ 250,00) e atraso no pagamento da guia de INSS (R$ 158,00), ambas regularizadas e com juros isentos.</div>
         </div>
         <div style="padding:12px;background:#10b98108;border-radius:10px;border-left:3px solid #10b981;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -1243,19 +1177,8 @@ const sections = {
               <span style="font-size:11px;color:#666">2025-12-17</span>
             </div>
           </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">DCTFWeb</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">MAED em aberto por DCTFWeb transmitida fora do prazo, gerando pendência fiscal para Mi Casa.</div>
-        </div>
-        <div style="padding:12px;background:#10b98108;border-radius:10px;border-left:3px solid #10b981;margin-bottom:8px">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div style="font-size:14px;font-weight:600;color:#34d399">EXA CAPITAL</div>
-            <div style="display:flex;gap:8px;align-items:center">
-              <span style="color:#f59e0b;font-size:12px;font-weight:600">R$ 500,00</span>
-              <span style="font-size:11px;color:#666">2025-12-08</span>
-            </div>
-          </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">DCTFWeb</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Omissão na entrega da DCTF Mensal de julho e agosto/2024 com multa de R$ 500,00 por atraso, prazo para regularização até 24/12/2025.</div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Multa</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Multa por DCTFWeb transmitida fora do prazo referente a abril de 2025.</div>
         </div>
         <div style="padding:12px;background:#10b98108;border-radius:10px;border-left:3px solid #10b981;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
@@ -1265,37 +1188,26 @@ const sections = {
               <span style="font-size:11px;color:#666">2025-11-11</span>
             </div>
           </div>
-          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">Retenções</div>
-          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Pendências de retenções de PIS, COFINS e CSLL não consideradas na apuração, com juros e multa simulados em R$ 157,76.</div>
+          <div style="font-size:12px;color:#f59e0b;margin-top:2px;font-weight:600">PIS/COFINS/CSLL</div>
+          <div style="font-size:13px;color:#aaa;margin-top:4px;line-height:1.5">Impostos retidos de PIS, COFINS e CSLL não considerados na apuração para recolhimento, gerando juros e multa de R$ 157,76.</div>
         </div>
     </div>
     <div class="card">
       <div class="card-title">📊 Distribuição por Tipo de Risco</div>
-      <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #1a1a2e"><span style="color:#aaa">Multa</span><span style="font-weight:600;color:#fff">57</span></div>
-      <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #1a1a2e"><span style="color:#aaa">DCTFWeb</span><span style="font-weight:600;color:#fff">22</span></div>
-      <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #1a1a2e"><span style="color:#aaa">Protesto</span><span style="font-weight:600;color:#fff">14</span></div>
-      <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #1a1a2e"><span style="color:#aaa">Outro</span><span style="font-weight:600;color:#fff">9</span></div>
-      <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #1a1a2e"><span style="color:#aaa">IRRF</span><span style="font-weight:600;color:#fff">8</span></div>
-      <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #1a1a2e"><span style="color:#aaa">PIS/COFINS</span><span style="font-weight:600;color:#fff">8</span></div>
-      <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #1a1a2e"><span style="color:#aaa">Retenções</span><span style="font-weight:600;color:#fff">7</span></div>
-      <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #1a1a2e"><span style="color:#aaa">ICMS</span><span style="font-weight:600;color:#fff">6</span></div>
-      <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #1a1a2e"><span style="color:#aaa">FGTS</span><span style="font-weight:600;color:#fff">6</span></div>
-      <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #1a1a2e"><span style="color:#aaa">DARF</span><span style="font-weight:600;color:#fff">4</span></div>
-      <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #1a1a2e"><span style="color:#aaa">eSocial</span><span style="font-weight:600;color:#fff">4</span></div>
-      <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #1a1a2e"><span style="color:#aaa">Simples Nacional</span><span style="font-weight:600;color:#fff">2</span></div>
-      <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #1a1a2e"><span style="color:#aaa">FUNRURAL</span><span style="font-weight:600;color:#fff">1</span></div>
-      <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #1a1a2e"><span style="color:#aaa">ICMS/IPI</span><span style="font-weight:600;color:#fff">1</span></div>
-      <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #1a1a2e"><span style="color:#aaa">EFD ICMS/IPI</span><span style="font-weight:600;color:#fff">1</span></div>
-      <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #1a1a2e"><span style="color:#aaa">REINF</span><span style="font-weight:600;color:#fff">1</span></div>
-      <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #1a1a2e"><span style="color:#aaa">INSS</span><span style="font-weight:600;color:#fff">1</span></div>
-      <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #1a1a2e"><span style="color:#aaa">ISS</span><span style="font-weight:600;color:#fff">1</span></div>
+      <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #1e1e2e"><span style="color:#aaa">Multa</span><span style="color:#fff;font-weight:600">31</span></div>
+      <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #1e1e2e"><span style="color:#aaa">Protesto</span><span style="color:#fff;font-weight:600">12</span></div>
+      <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #1e1e2e"><span style="color:#aaa">FGTS</span><span style="color:#fff;font-weight:600">9</span></div>
+      <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #1e1e2e"><span style="color:#aaa">PIS/COFINS</span><span style="color:#fff;font-weight:600">8</span></div>
+      <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #1e1e2e"><span style="color:#aaa">Multa e Juros</span><span style="color:#fff;font-weight:600">6</span></div>
+      <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #1e1e2e"><span style="color:#aaa">IRRF</span><span style="color:#fff;font-weight:600">5</span></div>
+      <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #1e1e2e"><span style="color:#aaa">Multa DCTF</span><span style="color:#fff;font-weight:600">5</span></div>
+      <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #1e1e2e"><span style="color:#aaa">FUNRURAL</span><span style="color:#fff;font-weight:600">4</span></div>
     </div>
     <div class="card">
       <div class="card-title">📋 Comitê de Riscos — Integração Ativa</div>
-      <div style="font-size:14px;color:#10b981;line-height:1.7">✅ Pandora está monitorando os emails do comitê, classificando por gravidade e populando este painel automaticamente. 153 riscos extraídos de 159 emails processados via IA.</div>
+      <div style="font-size:14px;color:#10b981;line-height:1.7">✅ Pandora está monitorando os emails do comitê, classificando por gravidade e populando este painel automaticamente. 151 riscos extraídos de 159 emails processados via IA.</div>
       <div style="font-size:13px;color:#666;margin-top:8px">Banco: /home/ubuntu/dga_risks.db · Log: /tmp/risk_sync.log</div>
     </div>
-  
   `,
   operacional: () => `
     <div class="section-header">🏢 Operacional DGA</div>
